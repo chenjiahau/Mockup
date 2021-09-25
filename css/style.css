@@ -1,3 +1,7 @@
+/* colors
+   background #FFF5F5
+   text #087F5B 
+ */
 * {
   padding: 0;
   margin: 0;
@@ -5,6 +9,7 @@
 
 body {
   background-color: #fff;
+  font-family: "DM Serif Text", serif;
 }
 
 /* Navbar */
@@ -14,7 +19,6 @@ body {
 }
 
 .i-nav-link {
-  font-family: "DM Serif Text";
   font-weight: bold;
   font-size: 20px;
 }
@@ -45,10 +49,81 @@ body {
   align-items: center;
 }
 
+/* Main */
+#main-container {
+  display: flex;
+  background-color: #fff5f5;
+}
+
+.i-choose-month {
+  display: flex;
+  justify-content: flex-end;
+  margin: 50px 0;
+}
+
+.i-calendar-week {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.i-calendar-week-item {
+  flex: 1;
+  height: 150px;
+  align-items: center;
+  justify-content: center;
+  background-color: #087f5b;
+  color: #efe2e2;
+  height: 30px;
+}
+
+.i-calendar-week .card {
+  background-color: transparent;
+  border: 0;
+}
+
+.i-calendar-week-item span {
+  font-size: 20px;
+  color: #087f5b;
+  font-family: "Noto Sans";
+  font-weight: bold;
+}
+
+.i-calendar-day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.i-calendar-day-item {
+  flex: 1;
+  height: 150px;
+  align-items: center;
+  justify-content: center;
+}
+
+.i-calendar-day-item span {
+  font-size: 60px;
+  font-family: "Noto Sans";
+  font-weight: bold;
+}
+
+.i-calendar-day-item .in {
+  color: #087f5b;
+}
+
+.i-calendar-day-item .out {
+  color: #efe2e2;
+}
+
 /* Media queries */
 @media (max-width: 678px) {
+  /* Navbar */
   .i-brand {
-    width: 150px;
+    width: 100px;
     transform: rotate(-39deg);
   }
 
@@ -56,11 +131,33 @@ body {
     margin-right: 10px;
   }
 
-  .navbar-collapse ul {
+  /* .navbar-collapse ul {
     height: 100vh;
-  }
+  } */
 
   .i-nav-item {
     margin-left: 13px;
+  }
+
+  /* Main */
+  .i-choose-month {
+    margin: 30px 0;
+  }
+
+  .i-calendar-week-item span {
+    font-size: 10px;
+  }
+
+  .i-calendar-day {
+    gap: 5px;
+    margin: 20px 0;
+  }
+
+  .i-calendar-day-item {
+    height: 50px;
+  }
+
+  .i-calendar-day-item span {
+    font-size: 10px;
   }
 }
