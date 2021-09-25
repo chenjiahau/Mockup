@@ -6,3 +6,61 @@
 body {
   background-color: #fff;
 }
+
+/* Navbar */
+.i-brand {
+  width: 100px;
+  transform: scale(2);
+}
+
+.i-nav-link {
+  font-family: "DM Serif Text";
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.i-icon {
+  display: inline-block;
+  background-size: 30px;
+  background-position: 50% 50%;
+  width: 30px;
+  height: 30px;
+}
+
+.i-icon-calendar {
+  background-image: url(../img/icon/calendar.png);
+}
+
+.i-icon-login {
+  background-image: url(../img/icon/login.png);
+}
+
+.i-icon-registration {
+  background-image: url(../img/icon/registration.png);
+}
+
+.i-nav-item {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Media queries */
+@media (max-width: 678px) {
+  .i-brand {
+    width: 150px;
+    transform: rotate(-39deg);
+  }
+
+  .i-icon {
+    margin-right: 10px;
+  }
+
+  .navbar-collapse ul {
+    height: 100vh;
+  }
+
+  .i-nav-item {
+    margin-left: 13px;
+  }
+}
