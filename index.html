@@ -52,7 +52,13 @@
               </li>
               <li class="nav-item i-nav-item">
                 <i class="i-icon i-icon-registration"></i>
-                <a class="nav-link i-nav-link" href="#">Register</a>
+                <a
+                  class="nav-link i-nav-link"
+                  href="javascript:void(0)"
+                  data-toggle="modal"
+                  data-target="#sign-up-modal"
+                  >Sign Up</a
+                >
               </li>
             </ul>
           </div>
@@ -284,6 +290,67 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-primary">Sign in</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="sign-up-modal" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Sign Up</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="alert alert-success" role="alert">Success</div>
+            <div class="alert alert-danger" role="alert">Error message</div>
+            <form>
+              <div class="form-group">
+                <label for="inputEmail">Email address</label>
+                <input type="email" class="form-control" id="inputEmail" />
+                <small class="form-text i-danger-message">Invaild email</small>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="inputPassword"
+                />
+                <small class="form-text i-danger-message"
+                  >Invaild password</small
+                >
+              </div>
+              <div class="form-group">
+                <label for="inputConfirmPassword">Confirm password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="inputConfirmPassword"
+                />
+                <small class="form-text i-danger-message"
+                  >Invaild password</small
+                >
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-info">Sign up</button>
             <button
               type="button"
               class="btn btn-secondary"
