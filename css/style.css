@@ -124,11 +124,37 @@ body {
 }
 
 .i-calendar-day-item .in {
-  color: #087f5b;
+  color: #000;
 }
 
 .i-calendar-day-item .out {
   color: #efe2e2;
+}
+
+.i-calendar-day-active-item {
+  flex: 1;
+  height: 150px;
+  align-items: center;
+  justify-content: center;
+  background-color: #087f5b;
+}
+
+.i-calendar-day-active-item span {
+  font-size: 60px;
+  font-family: "Noto Sans";
+  font-weight: bold;
+  color: #fff;
+}
+
+.i-calendar-day-active-item .work-count {
+  font-size: 15px;
+  line-height: 2;
+  color: #000;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #fff;
+  text-align: center;
 }
 
 /* Footer */
@@ -240,6 +266,22 @@ footer {
 
   .i-calendar-day-item span {
     font-size: 10px;
+  }
+
+  .i-calendar-day-active-item {
+    height: 50px;
+  }
+
+  .i-calendar-day-active-item span {
+    font-size: 12px;
+  }
+
+  .i-calendar-day-active-item .work-count {
+    font-size: 12px;
+    line-height: 1.4;
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
   }
 
   /* Footer */
