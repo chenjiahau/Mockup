@@ -42,7 +42,13 @@
               </li>
               <li class="nav-item i-nav-item">
                 <i class="i-icon i-icon-login"></i>
-                <a class="nav-link i-nav-link" href="#">Login</a>
+                <a
+                  class="nav-link i-nav-link"
+                  href="#"
+                  data-toggle="modal"
+                  data-target="#sign-in-modal"
+                  >Sign in</a
+                >
               </li>
               <li class="nav-item i-nav-item">
                 <i class="i-icon i-icon-registration"></i>
@@ -238,8 +244,61 @@
     <footer>
       <span>&#169;ISP-START</span>
     </footer>
+
+    <!-- modal -->
+    <div id="sign-in-modal" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Sign In</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="alert alert-success" role="alert">Success</div>
+            <div class="alert alert-danger" role="alert">Error message</div>
+            <form>
+              <div class="form-group">
+                <label for="inputEmail">Email address</label>
+                <input type="email" class="form-control" id="inputEmail" />
+                <small class="form-text i-danger-message">Invaild email</small>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="inputPassword"
+                />
+                <small class="form-text i-danger-message"
+                  >Invaild password</small
+                >
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Sign in</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
 
 <script src="./js/jquery.min.js"></script>
 <script src="./js/bootstrap.bundle.min.js"></script>
+
+<script></script>

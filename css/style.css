@@ -129,6 +129,11 @@ footer {
   font-size: 30px;
 }
 
+/* Modal */
+.i-danger-message {
+  color: #721c24;
+}
+
 /* Media queries */
 @media (max-width: 678px) {
   /* Header */
