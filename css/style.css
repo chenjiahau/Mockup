@@ -145,6 +145,25 @@ footer {
   color: #721c24;
 }
 
+/* firstin */
+.i-firstin-modal .i-title {
+  color: #087f5b;
+}
+
+.i-firstin-modal .i-body {
+  height: 400px;
+  overflow: auto;
+}
+
+.i-firstin-modal .i-footer {
+  margin: 10px 0;
+}
+
+.i-firstin-modal .i-item {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
 /* Media queries */
 @media (max-width: 678px) {
   /* Header */

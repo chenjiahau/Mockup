@@ -54,7 +54,7 @@
                   href="javascript:void(0)"
                   data-toggle="modal"
                   data-target="#sign-up-modal"
-                  >Sign Up</a
+                  >Sign up</a
                 >
               </li>
             </ul>
@@ -349,10 +349,54 @@
         </div>
       </div>
     </div>
+
+    <div id="firstin-modal" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body i-firstin-modal">
+            <h1 class="text-center i-title">20210930</h1>
+            <hr />
+            <div class="i-body">
+              <div class="card i-item">
+                <div class="card-body">
+                  <h5 class="card-title">吃早餐</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">09:00-10:00</h6>
+                  <p class="card-text">吃早餐</p>
+                  <div class="text-right">
+                    <a href="#" class="card-link btn btn-outline-danger"
+                      >Cancel</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="card i-item">
+                <div class="card-body">
+                  <h5 class="card-title">吃早餐</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">09:00-10:00</h6>
+                  <p class="card-text">吃早餐</p>
+                  <div class="text-right">
+                    <a href="#" class="card-link btn btn-outline-danger"
+                      >Cancel</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="i-footer">
+              <button class="btn btn-secondary btn-block" data-dismiss="modal">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
 
 <script src="./js/jquery.min.js"></script>
 <script src="./js/bootstrap.bundle.min.js"></script>
 
-<script></script>
+<script>
+  $("#firstin-modal").modal("show");
+</script>
