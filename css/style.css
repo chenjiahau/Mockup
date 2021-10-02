@@ -60,6 +60,17 @@ body {
   display: flex;
   justify-content: flex-end;
   margin: 50px 0;
+  gap: 10px;
+}
+
+.i-choose-prev-month,
+.i-choose-next-month {
+  width: 48px;
+}
+
+.i-chosen-month {
+  font-size: 30px;
+  color: #087f5b;
 }
 
 .i-calendar-week {
@@ -144,19 +155,40 @@ footer {
 
   .i-icon {
     margin-right: 10px;
+    background-size: 16px;
+    background-position: 50% 50%;
+    width: 16px;
+    height: 16px;
   }
 
   /* .navbar-collapse ul {
     height: 100vh;
   } */
 
+  .i-navbar {
+    margin-top: -24px;
+  }
+
   .i-nav-item {
     margin-left: 13px;
+  }
+
+  .i-nav-link {
+    font-size: 12px;
   }
 
   /* Main Container */
   .i-choose-month {
     margin: 30px 0;
+  }
+
+  .i-choose-prev-month,
+  .i-choose-next-month {
+    width: 24px;
+  }
+
+  .i-chosen-month {
+    font-size: 16px;
   }
 
   .i-calendar-week-item span {
