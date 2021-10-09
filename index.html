@@ -13,6 +13,10 @@
       href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Noto+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
+      rel="stylesheet"
+    />
     <link href="./css/bootstrap.min.css" rel="stylesheet" />
     <link href="./css/style.css" rel="stylesheet" />
   </head>
@@ -66,9 +70,11 @@
     <section id="main-container">
       <div class="container">
         <div class="i-choose-month">
-          <img src="img/icon/left-arrow.png" class="i-choose-prev-month" />
           <div class="i-chosen-month">202109</div>
-          <img src="img/icon/right-arrow.png" class="i-choose-next-month" />
+          <div class="i-switch-month">
+            <div class="i-change-month">Previous</div>
+            <div class="i-change-month">Next</div>
+          </div>
         </div>
         <div class="i-calendar-week">
           <div class="card i-calendar-week-item">
@@ -403,5 +409,5 @@
 <script src="./js/bootstrap.bundle.min.js"></script>
 
 <script>
-  $("#firstin-modal").modal("show");
+  // $("#firstin-modal").modal("show");
 </script>

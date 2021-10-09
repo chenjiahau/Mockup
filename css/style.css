@@ -58,7 +58,8 @@ body {
 
 .i-choose-month {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
   margin: 50px 0;
   gap: 10px;
 }
@@ -69,8 +70,28 @@ body {
 }
 
 .i-chosen-month {
-  font-size: 30px;
+  font-family: "Architects Daughter", cursive;
+  font-size: 56px;
   color: #087f5b;
+}
+
+.i-switch-month {
+  display: flex;
+  gap: 10px;
+}
+
+.i-change-month {
+  padding: 10px 15px;
+  background-color: #087f5b;
+  border: 1px solid #087f5b;
+  color: #fff;
+  border-radius: 40px;
+}
+
+.i-change-month:hover {
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
 }
 
 .i-calendar-week {
@@ -248,7 +269,21 @@ footer {
   }
 
   .i-chosen-month {
-    font-size: 16px;
+    font-size: 36px;
+  }
+
+  .i-change-month {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    color: #000;
+    border-radius: 0;
+  }
+
+  .i-change-month:hover {
+    background-color: transparent;
+    color: #087f5b;
+    cursor: pointer;
   }
 
   .i-calendar-week-item span {
