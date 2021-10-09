@@ -402,6 +402,90 @@
         </div>
       </div>
     </div>
+
+    <div id="edit-day-modal" class="modal">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-body i-edit-day-modal">
+            <h1 class="text-center i-title">20210930</h1>
+            <hr />
+            <div class="i-body">
+              <div class="alert alert-success" role="alert">Success</div>
+              <div class="alert alert-danger" role="alert">Error message</div>
+              <div class="i-operation-normal-size">
+                <button class="btn btn-primary">Add a new task</button>
+                <button class="btn btn-danger">Clean all tasks</button>
+              </div>
+              <div class="i-operation-small-size">
+                <button class="btn btn-primary">Add</button>
+                <button class="btn btn-danger">Clean</button>
+              </div>
+              <div id="add-a-new-task" class="card i-item">
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="title">Title</label>
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      id="title"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label>Date</label>
+                    <select class="form-control form-control-sm">
+                      <option>20210930</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Time</label>
+                    <select class="form-control form-control-sm">
+                      <option>09:00</option>
+                    </select>
+                    <div class="i-mb-10"></div>
+                    <select class="form-control form-control-sm">
+                      <option>09:00</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="title">Detail</label>
+                    <textarea
+                      class="form-control form-control-lg"
+                      rows="3"
+                    ></textarea>
+                  </div>
+                  <div class="form-group">
+                    <button class="btn btn-primary btn-block">Post</button>
+                    <button class="btn btn-danger btn-block">Cancel</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card i-item">
+                <div class="card-body">
+                  <div class="i-item-header">
+                    <h5 class="card-title">吃早餐</h5>
+                    <div>
+                      <button class="btn btn-primary">Edit</button>
+                    </div>
+                  </div>
+                  <h6 class="card-subtitle mb-2 text-muted">09:00-10:00</h6>
+                  <p class="card-text">吃早餐</p>
+                  <div class="text-right">
+                    <a href="#" class="card-link btn btn-outline-danger"
+                      >Cancel</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="i-footer">
+              <button class="btn btn-secondary btn-block" data-dismiss="modal">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
 
@@ -410,4 +494,8 @@
 
 <script>
   $("#firstin-modal").modal("show");
+
+  $(".i-calendar-day-active-item").on("click", function () {
+    $("#edit-day-modal").modal("show");
+  });
 </script>

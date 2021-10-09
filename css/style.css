@@ -123,6 +123,12 @@ body {
   font-weight: bold;
 }
 
+.i-calendar-day-item:hover,
+.i-calendar-day-item span:hover {
+  font-size: 50px;
+  cursor: pointer;
+}
+
 .i-calendar-day {
   display: flex;
   justify-content: center;
@@ -165,6 +171,12 @@ body {
   font-family: "Noto Sans";
   font-weight: bold;
   color: #fff;
+}
+
+.i-calendar-day-active-item:hover,
+.i-calendar-day-active-item span:hover {
+  font-size: 50px;
+  cursor: pointer;
 }
 
 .i-calendar-day-active-item .work-count {
@@ -225,6 +237,42 @@ footer {
 .i-firstin-modal .i-item {
   width: 100%;
   margin-bottom: 20px;
+}
+
+.i-edit-day-modal .i-title {
+  font-family: "Architects Daughter", cursive;
+}
+
+.i-edit-day-modal .i-body {
+  height: 500px;
+  overflow: auto;
+}
+
+#add-a-new-task {
+  color: #000;
+  font-size: 20px;
+}
+
+.i-edit-day-modal .i-operation-normal-size {
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px;
+  margin: 0 0 10px 0;
+}
+
+.i-edit-day-modal .i-item {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.i-edit-day-modal .i-operation-small-size {
+  display: none;
+}
+
+.i-edit-day-modal .i-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Media queries */
@@ -304,12 +352,23 @@ footer {
     font-size: 10px;
   }
 
+  .i-calendar-day-item:hover,
+  .i-calendar-day-item span:hover {
+    font-size: 10px;
+    cursor: pointer;
+  }
+
   .i-calendar-day-active-item {
     height: 50px;
   }
 
   .i-calendar-day-active-item span {
     font-size: 12px;
+  }
+
+  .i-calendar-day-active-item:hover,
+  .i-calendar-day-active-item span:hover {
+    font-size: 10px;
   }
 
   .i-calendar-day-active-item .work-count {
@@ -337,4 +396,21 @@ footer {
     font-size: 18px;
     margin: 16px;
   }
+
+  /* Modal */
+  .i-edit-day-modal .i-operation-normal-size {
+    display: none;
+  }
+
+  .i-edit-day-modal .i-operation-small-size {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+    margin: 0 0 10px 0;
+  }
+}
+
+/* common */
+.i-mb-10 {
+  margin-bottom: 10px;
 }
