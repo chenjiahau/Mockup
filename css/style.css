@@ -290,40 +290,12 @@ footer {
   color: #721c24;
 }
 
-.i-edit-day-modal .i-title {
-  font-family: "Architects Daughter", cursive;
-}
-
-.i-edit-day-modal .i-body {
-  height: 500px;
-  overflow: auto;
-}
-
-#add-a-new-task {
-  color: #000;
-  font-size: 20px;
-}
-
-.i-edit-day-modal .i-operation-normal-size {
+.i-operation-normal-size {
+  position: relative;
   display: flex;
   justify-content: flex-start;
   gap: 5px;
   margin: 0 0 10px 0;
-}
-
-.i-edit-day-modal .i-item {
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.i-edit-day-modal .i-operation-small-size {
-  display: none;
-}
-
-.i-edit-day-modal .i-item-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 /* Media queries */
@@ -489,4 +461,26 @@ footer {
 .i-cancel-button {
   border-radius: 20px;
   color: #aa3939;
+}
+
+.i-small-button {
+  width: 50px;
+  height: 50px;
+  background-color: #087f5b;
+  border: 1px solid #087f5b;
+  border-radius: 25px;
+  color: #fff;
+  top: -30px;
+  position: relative;
+  margin-bottom: -24px;
+  font-size: 14px;
+}
+
+.i-small-button-add:hover {
+  font-size: 16px;
+}
+.i-small-button-del:hover {
+  background-color: #721c24;
+  border: 1px solid #721c24;
+  font-size: 16px;
 }
