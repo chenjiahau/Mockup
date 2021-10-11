@@ -264,10 +264,21 @@ footer {
 }
 
 .i-item-title-right {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
+}
+
+.i-item-title-right-icon {
+  position: relative;
+  top: 2px;
+}
+
+.i-item-title-right-icon:hover {
+  color: #000;
+  cursor: pointer;
 }
 
 .i-item-body {
