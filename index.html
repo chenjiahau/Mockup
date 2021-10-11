@@ -653,6 +653,61 @@
         </div>
       </div>
     </div>
+
+    <div id="post-modal" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">20210916 - Post</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="alert alert-success" role="alert">Success</div>
+            <div class="alert alert-danger" role="alert">Error message</div>
+            <div class="form-group">
+              <label for="title">Title</label>
+              <input type="text" class="form-control" id="title" />
+            </div>
+            <div class="form-group">
+              <label>Time</label>
+              <div style="display: flex; gap: 20px">
+                <div style="flex: 1">
+                  <select class="form-control">
+                    <option>09:00</option>
+                  </select>
+                </div>
+                <div style="flex: 1">
+                  <select class="form-control">
+                    <option>09:00</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="title">Detail</label>
+              <textarea
+                class="form-control form-control-lg"
+                rows="3"
+              ></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a class="i-button i-save-button">Post</a>
+            <div class="i-mr-10"></div>
+            <a class="i-button i-cancel-button" data-dismiss="modal">
+              Cancel
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
 
@@ -660,9 +715,14 @@
 <script src="./js/bootstrap.bundle.min.js"></script>
 
 <script>
-  $("#firstin-modal").modal("show");
+  // $("#firstin-modal").modal("show");
 
   $(".i-calendar-day-active-item").on("click", function () {
     $("#edit-day-modal").modal("show");
+  });
+
+  $(".i-small-button-add").on("click", function () {
+    $("#edit-day-modal").modal("hide");
+    $("#post-modal").modal("show");
   });
 </script>
