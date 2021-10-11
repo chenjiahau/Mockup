@@ -424,7 +424,32 @@ footer {
   }
 }
 
-/* common */
+/* In common */
 .i-mb-10 {
   margin-bottom: 10px;
+}
+
+.i-mr-10 {
+  margin-bottom: 10px;
+}
+
+/* Button */
+.i-button {
+  font-size: 20px;
+}
+
+.i-button:hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: #000;
+}
+
+.i-save-button {
+  border-radius: 20px;
+  color: #087f5b;
+}
+
+.i-cancel-button {
+  border-radius: 20px;
+  color: #aa3939;
 }
