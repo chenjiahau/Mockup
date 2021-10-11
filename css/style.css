@@ -479,6 +479,11 @@ footer {
 .i-small-button-add:hover {
   font-size: 16px;
 }
+
+.i-small-button-del {
+  background-color: #721c24;
+}
+
 .i-small-button-del:hover {
   background-color: #721c24;
   border: 1px solid #721c24;
