@@ -17,6 +17,14 @@
       href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
       rel="stylesheet"
     />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
     <link href="./css/bootstrap.min.css" rel="stylesheet" />
     <link href="./css/style.css" rel="stylesheet" />
   </head>
@@ -72,8 +80,12 @@
         <div class="i-choose-month">
           <div class="i-chosen-month">202109</div>
           <div class="i-switch-month">
-            <div class="i-change-month">Previous</div>
-            <div class="i-change-month">Next</div>
+            <div class="i-change-month i-previous-month">
+              <ion-icon name="chevron-back-outline"></ion-icon>
+            </div>
+            <div class="i-change-month i-next-month">
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </div>
           </div>
         </div>
         <div class="i-calendar-week">
@@ -493,7 +505,7 @@
 <script src="./js/bootstrap.bundle.min.js"></script>
 
 <script>
-  $("#firstin-modal").modal("show");
+  // $("#firstin-modal").modal("show");
 
   $(".i-calendar-day-active-item").on("click", function () {
     $("#edit-day-modal").modal("show");

@@ -1,6 +1,7 @@
 /* colors
    background #FFF5F5
-   text #087F5B 
+   text #087F5B
+   middle #AA3939
  */
 * {
   padding: 0;
@@ -82,16 +83,28 @@ body {
 }
 
 .i-change-month {
-  padding: 10px 15px;
-  background-color: #087f5b;
-  border: 1px solid #087f5b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
   color: #fff;
-  border-radius: 40px;
+  font-size: 24px;
+}
+
+.i-previous-month {
+  background-color: #aa3939;
+  border: 1px solid #aa3939;
+}
+
+.i-next-month {
+  background-color: #7a9f35;
+  border: 1px solid #7a9f35;
 }
 
 .i-change-month:hover {
-  background-color: #fff;
-  color: #000;
+  font-size: 36px;
   cursor: pointer;
 }
 
