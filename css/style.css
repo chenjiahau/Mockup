@@ -229,28 +229,54 @@ footer {
 }
 
 /* Modal */
-.i-danger-message {
-  color: #721c24;
+.modal-content {
+  background-color: #f7f3f3;
 }
 
-/* firstin */
-.i-firstin-modal .i-title {
-  font-family: "Architects Daughter", cursive;
+.modal-title {
+  color: #087f5b;
+  font-weight: bold;
+}
+
+.i-body {
+  height: 500px;
+  overflow-y: auto;
+}
+
+.i-item {
+  width: 98%;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  background-color: #efe2e2;
+  border: 2px solid #efe2e2;
+  border-radius: 5px;
+}
+
+.i-item-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   color: #087f5b;
 }
 
-.i-firstin-modal .i-body {
-  height: 400px;
-  overflow: auto;
+.i-item-title-left {
+  font-weight: bold;
 }
 
-.i-firstin-modal .i-footer {
-  margin: 10px 0;
+.i-item-title-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
-.i-firstin-modal .i-item {
-  width: 100%;
+.i-item-body {
+  margin-top: 5px;
   margin-bottom: 20px;
+}
+
+.i-danger-message {
+  color: #721c24;
 }
 
 .i-edit-day-modal .i-title {
