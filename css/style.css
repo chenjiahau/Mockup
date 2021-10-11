@@ -228,6 +228,10 @@ footer {
   font-size: 36px;
 }
 
+.i-post-one:hover {
+  font-size: 40px;
+}
+
 /* Modal */
 .modal-content {
   background-color: #f7f3f3;

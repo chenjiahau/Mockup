@@ -715,7 +715,7 @@
 <script src="./js/bootstrap.bundle.min.js"></script>
 
 <script>
-  // $("#firstin-modal").modal("show");
+  $("#firstin-modal").modal("show");
 
   $(".i-calendar-day-active-item").on("click", function () {
     $("#edit-day-modal").modal("show");
@@ -723,6 +723,10 @@
 
   $(".i-small-button-add").on("click", function () {
     $("#edit-day-modal").modal("hide");
+    $("#post-modal").modal("show");
+  });
+
+  $(".i-post-one").on("click", function () {
     $("#post-modal").modal("show");
   });
 </script>
