@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Mockup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Noto+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img class="i-brand" src="./img/brand.png" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto i-navbar">
+              <li class="nav-item i-nav-item">
+                <a class="nav-link i-nav-link" href="./index.html">Calendar</a>
+              </li>
+              <li class="nav-item i-nav-item">
+                <a class="nav-link i-nav-link" href="./statistic.html"
+                  >Statistic</a
+                >
+              </li>
+              <li class="nav-item i-nav-item">
+                <a
+                  class="nav-link i-nav-link-in"
+                  href="#"
+                  data-toggle="modal"
+                  data-target="#sign-in-modal"
+                  ><span class="d-user"></span
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section id="main-container">
+      <div class="container"></div>
+    </section>
+
+    <footer>
+      <span>&#169;ISP-START</span>
+    </footer>
+  </body>
+</html>
+
+<script src="./js/jquery.min.js"></script>
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="./js/handlebars.js"></script>
+<script src="./js/function.js"></script>
+<script src="./js/global.js"></script>
+
+<script>
+  const { user } = parseQueryString();
+
+  if (!user) {
+    backToIndex();
+  }
+
+  const template = Handlebars.compile("Hi {{user}}");
+  $(".d-user")
+    .html(template({ user }))
+    .click(function () {
+      backToIndex();
+    });
+</script>
