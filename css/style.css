@@ -211,6 +211,46 @@ a.i-nav-link-in,
   text-align: center;
 }
 
+/* Statistic Container */
+#manage-container {
+  background-color: #fff5f5;
+  padding: 20px;
+}
+
+.i-manage {
+  display: grid;
+  grid-template-columns: 160px auto;
+  column-gap: 12px;
+  row-gap: 8px;
+}
+
+.i-manage-bread {
+  grid-column: 1/-1;
+}
+
+.i-manage-left {
+}
+
+.i-manage-right {
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 12px 20px;
+}
+
+.i-manage-menu {
+  border-radius: 20px;
+  border: 2px solid #aa3939;
+  margin-bottom: 3px;
+  text-align: center;
+  background-color: #fff;
+  padding: 4px;
+}
+
+.i-statistic-day {
+  width: 40px;
+  text-align: center;
+}
+
 /* Footer */
 footer {
   text-align: right;
@@ -411,6 +451,10 @@ footer {
     width: 16px;
     height: 16px;
     border-radius: 16px;
+  }
+
+  .i-manage {
+    grid-template-columns: 1fr;
   }
 
   /* Footer */
