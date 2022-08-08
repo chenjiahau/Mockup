@@ -57,10 +57,9 @@ footer {
   background-color: #333333;
   color: #fff;
   text-align: center;
-  font-size: 32px;
+  font-size: 22px;
   font-weight: 200;
-  height: 180px;
-  letter-spacing: 0px;
+  height: 60px;
 }
 
 /* Section */
@@ -69,7 +68,7 @@ section {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  height: 900px;
+  height: 800px;
   background-color: #89d0ca;
   overflow: hidden;
 }
@@ -95,8 +94,6 @@ section {
 
 .container .right img {
   width: 100%;
-  position: relative;
-  top: 60px;
 }
 
 .contact-us {
@@ -108,7 +105,7 @@ section {
 }
 
 .contact-us .title {
-  font-size: 58px;
+  font-size: 48px;
   letter-spacing: -1px;
   font-family: 'Noto Sans', sans-serif;
   font-weight: 800;
@@ -121,7 +118,7 @@ section {
 }
 
 .contact-us input {
-  font-size: 22px;
+  font-size: 18px;
   margin: 0 0 8px 0;
   padding: 28px 0 12px 0;
   width: 100%;
@@ -131,10 +128,10 @@ section {
 }
 
 .contact-us textarea {
-  font-size: 22px;
+  font-size: 18px;
   padding: 28px 0 12px 0;
   width: 100%;
-  height: 140px;
+  height: 100px;
   font-family: 'Courier New', Courier, monospace;
   font-weight: 200;
   border: none;
@@ -144,23 +141,23 @@ section {
 .sub-title {
   font-family: 'Noto Sans', sans-serif;
   letter-spacing: 2px;
-  font-size: 32px;
+  font-size: 18px;
   font-weight: 800;
 }
 
 .main-title {
-  font-size: 82px;
+  font-size: 52px;
   line-height: 72px;
 }
 
 .main-title .light {
-  font-size: 62px;
+  font-size: 52px;
   font-weight: 200;
   margin-right: 8px;
 }
 
 .second-main-title {
-  font-size: 62px;
+  font-size: 48px;
 }
 
 .main-title .weight {
@@ -169,9 +166,10 @@ section {
 }
 
 .description {
-  font-size: 22px;
+  font-size: 18px;
   letter-spacing: 2px;
-  line-height: 36px;
+  line-height: 30px;
+  font-weight: 300;
 }
 
 /* Button */
