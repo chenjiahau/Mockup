@@ -1,59 +1,32 @@
-/* Section */
-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  height: 800px;
-  background-color: #89d0ca;
-  overflow: hidden;
-}
-
-.section-white {
-  background-color: #fff;
-}
-
-.container {
-  display: flex;
-  align-items: center;
-  width: 80%;
-}
-
-.container .left {
-  width: 50%;
-  margin-right: 32px;
-}
-
-.container .right {
-  width: 50%;
-}
-
-.container .right img {
-  width: 100%;
-}
-
-.contact-us {
+.normal-form {
   padding: 32px 128px;
   width: 50%;
-  height: 60%;
   background-color: rgb(255, 255, 255);
   border-radius: 28px;
 }
 
-.contact-us .title {
+.normal-form .title {
   font-size: 48px;
   letter-spacing: -1px;
   font-family: 'Noto Sans', sans-serif;
   font-weight: 800;
 }
 
-.contact-us .content {
+.normal-form .content {
   display: flex;
+  align-items: center;
   border: none;
   border-bottom: 1px solid #c0c0c0;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-.contact-us input {
+.normal-form label {
+  font-size: 18px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.normal-form input {
   font-size: 18px;
   margin: 0 0 8px 0;
   padding: 28px 0 12px 0;
@@ -63,7 +36,14 @@ section {
   font-weight: 200;
 }
 
-.contact-us textarea {
+.normal-form input.checkbox {
+  margin: 0;
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+}
+
+.normal-form textarea {
   font-size: 18px;
   padding: 28px 0 12px 0;
   width: 100%;
@@ -71,5 +51,10 @@ section {
   font-family: 'Courier New', Courier, monospace;
   font-weight: 200;
   border: none;
+}
+
+.normal-form .action {
+  display: flex;
+  justify-content: end;
 }
 

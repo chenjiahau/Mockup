@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 *:focus{
@@ -60,4 +61,43 @@ footer {
   font-size: 22px;
   font-weight: 200;
   height: 60px;
+}
+
+/* Section */
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height: 800px;
+  background-color: #89d0ca;
+  overflow: hidden;
+}
+
+.section-white {
+  background-color: #fff;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+
+.container .left {
+  width: 50%;
+  margin-right: 32px;
+}
+
+.container .right {
+  width: 50%;
+}
+
+.container .right img {
+  width: 100%;
+}
+
+.section-form {
+  padding: 32px 0;
+  background-color: #89d0ca;
 }
