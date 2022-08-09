@@ -1,19 +1,25 @@
 .message {
-  margin-bottom: 32px;
-  border-radius: 28px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 32px;
+  line-height: 32px;
+  background-color: rgba(0, 0, 0, 1);
   text-align: center;
   font-size: 22px;
   color: #fff;
 }
 
 .message .success {
-  color: #075952;
+  background-color: #075952;
 }
 
 .message .error {
-  color: #ff0000;
+  background-color: #ff0000;
 }
 
 .message .warning {
-  color: #f4fb2f;
+  background-color: #969b0b;
 }
