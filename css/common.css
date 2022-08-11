@@ -15,6 +15,7 @@
   font-size: 52px;
   font-weight: 200;
   margin-right: 8px;
+  color: #fff;
 }
 
 .second-main-title {
@@ -22,6 +23,7 @@
 }
 
 .main-title .weight {
+  font-size: 32px;
   font-family: 'Noto Sans', sans-serif;
   font-weight: 500;
 }
@@ -82,6 +84,19 @@
   background-color: #075952;
 }
 
+/* A Tag*/
+a.general:link, a.general:visited {
+  font-family: 'Alumni Sans Pinstripe', sans-serif;
+  font-size: 22px;
+  text-decoration: none;
+  color: #000;
+}
+
+a.general:hover {
+  text-decoration: none;
+  color: #89d0ca;
+}
+
 /* Space */
 .super-large-space {
   margin: 122px 0 0 0;
@@ -93,4 +108,21 @@
 
 .middle-space {
   margin: 22px 0;
+}
+
+/* Color */
+.light-green {
+  color: #89d0ca;
+}
+
+.heavy-green {
+  color: #075952;
+}
+
+/* Other */
+.divide {
+  margin: 0 8px;
+  color: #c0c0c0;
+  font-size: 16px;
+  font-weight: 200;
 }

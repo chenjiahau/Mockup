@@ -36,7 +36,8 @@ header .logo {
 header .right {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-self: center;
+  align-items: baseline;
 }
 
 header .menu {
