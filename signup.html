@@ -53,7 +53,7 @@
         <label for="agree-item">Agree</label>
       </div>
       <div class="action">
-        <div class="btn btn-submit">
+        <div id="btn-signup" class="btn btn-submit">
           Sign UP
         </div>
         <div class="btn btn-submit btn-cancel">
@@ -71,3 +71,9 @@
 
 <script src="./js/jquery.min.js"></script>
 <script src="./js/bootstrap.bundle.min.js"></script>
+
+<script>
+  $('#btn-signup').click(() => {
+    window.location.href = 'index-in.html'
+  });
+</script>
