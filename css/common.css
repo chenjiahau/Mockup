@@ -97,6 +97,116 @@ a.general:hover {
   color: #89d0ca;
 }
 
+/* Block */
+.block-one {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  margin: 12px 0 68px 0;
+  color: #000;
+}
+
+.block-one .btn {
+  margin: 0;
+  font-weight: normal;
+  padding: 16px 32px;
+}
+
+.block-one .btn-big {
+  width: auto;
+  height: auto;
+  font-size: 32px;
+  background-color: #fff;
+  color: #000;
+}
+
+.block-one .btn-small {
+  padding: 8px 22px;
+  width: 220px;
+  height: auto;
+  font-size: 16px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 32px;
+}
+
+.block-one .btn:hover {
+  background-color: #075952;
+  color: #fff;
+}
+
+.block-content {
+  width: 100%;
+  border-radius: 32px;
+  background-color: #fff;
+  padding: 32px;
+}
+
+.block-item {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+  width: 100%;
+}
+
+.block-item .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 18px 0;
+  padding: 8px 0;
+  border-bottom: 1px  solid #000;
+  font-weight: bold;
+ }
+
+ .block-item .header .left {
+  font-size: 22px;
+  width: 80%;
+ }
+
+ .block-item .header .right {
+  text-align: right;
+  width: 20%;
+ }
+
+.block-item .body {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 28px;
+  margin: 8px 0;
+}
+
+.block-item .body .left {
+  width: 80%;
+}
+
+.block-item .body .right {
+  width: 20%;
+  text-align: right;
+}
+
+.block-item .text-title {
+  font-size: 18px;
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 32px;
+}
+
+.block-item .text-item {
+  font-size: 16px;
+  text-align: right;
+}
+
+.block-item .text-item:last-child {
+  margin-bottom: 32px;
+}
+
+.block-item .footer {
+  display: flex;
+  justify-content: end;
+}
+
 /* Space */
 .super-large-space {
   margin: 122px 0 0 0;

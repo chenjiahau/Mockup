@@ -12,6 +12,10 @@ body {
   background-color: #fff;
 }
 
+a:link, a:visited {
+  text-decoration: none;
+}
+
 /* Header */
 header {
   display: flex;
@@ -64,6 +68,57 @@ footer {
   height: 60px;
 }
 
+/* Navigation */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #075952;
+  border-bottom: 2px solid #89d0ca;
+  color: #fff;
+}
+
+nav .navbar {
+  display: flex;
+  justify-content: end;
+  width: 80%;
+}
+
+nav .nav-item {
+  height: 32px;
+  padding: 4px 22px;
+  line-height: 32px;
+  cursor: pointer;
+  text-align: center;
+}
+
+nav .nav-item:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+nav .nav-special-item {
+  height: 32px;
+  padding: 4px 22px;
+  line-height: 32px;
+  cursor: pointer;
+  text-align: center;
+  background-color: #ff0;
+  color: #000;
+}
+
+nav .nav-special-item:hover {
+  background-color: #fff;
+}
+
+nav .nav-active-item {
+  height: 32px;
+  padding: 4px 22px;
+  line-height: 36px;
+  background-color: #000;
+  text-align: center;
+}
+
 /* Section */
 section {
   display: flex;
@@ -102,4 +157,15 @@ section {
   flex-direction: column;
   padding: 32px 0;
   background-color: #89d0ca;
+}
+
+.section-account {
+  height: auto;
+  background-color: #89d0ca;
+}
+
+.section-account .container {
+  flex-direction: column;
+  width: 80%;
+  padding: 128px 0;
 }
