@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Online Courses</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,500;0,800;1,200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&display=swap" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet">
+  <link href="./css/common.css" rel="stylesheet">
+  <link href="./css/form.css" rel="stylesheet">
+  <link href="./css/message.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <a href="index.html">
+      <div class="logo"></div>
+    </a>
+    <div class="right">
+      <div class="btn-small">
+        Hi! John Doe
+      </div>
+      <div class="btn-small">
+        <a class="general" href="./index.html">Log out</a>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="navbar">
+      <div class="nav-item">Open</div>
+      <div class="nav-active-item">Yours</div>
+      <div class="nav-item nav-special-item">As a Teacher</div>
+    </div>
+  </nav>
+
+  <section class="section-account">
+    <div class="container">
+      <div class="block-content">
+      </div>
+  </section>
+
+  <footer>
+    Copyright © Online Courses
+  </footer>
+</body>
+</html>
+
+<script src="./js/jquery.min.js"></script>
+<script src="./js/bootstrap.bundle.min.js"></script>
+
+<script>
+  $('.nav-item').click(function() {
+    const text = $(this).html().toLowerCase();
+    let path =  './index-open.html';
+
+    if (text === 'yours') {
+      path = './index-yours.html';
+    } else if (text === 'as a teacher') {
+      path = './index-as-a-teacher.html';
+    }
+
+    window.location.href = path;
+  });
+</script>

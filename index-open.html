@@ -31,7 +31,7 @@
     <div class="navbar">
       <div class="nav-active-item">Open</div>
       <div class="nav-item">Yours</div>
-      <div class="nav-special-item">As a Teacher</div>
+      <div class="nav-item nav-special-item">As a Teacher</div>
     </div>
   </nav>
 
@@ -51,6 +51,19 @@
 <script src="./js/bootstrap.bundle.min.js"></script>
 
 <script>
+  $('.nav-item').click(function() {
+    const text = $(this).html().toLowerCase();
+    let path =  './index-open.html';
+
+    if (text === 'yours') {
+      path = './index-yours.html';
+    } else if (text === 'as a teacher') {
+      path = './index-as-a-teacher.html';
+    }
+
+    window.location.href = path;
+  });
+
   const courses = [
     {
       id: 1,
