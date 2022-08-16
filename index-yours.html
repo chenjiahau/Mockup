@@ -37,6 +37,9 @@
 
   <section class="section-account">
     <div class="container">
+      <div class="block-top">
+        <div class="block-label info"></div>
+      </div>
       <div class="block-content">
       </div>
   </section>
@@ -96,6 +99,10 @@
       joinedDate: '2022-08-15 09:00:00'
     }
   ];
+
+  $('.info')
+    .empty()
+    .append('Total Courses: ' + courses.length);
 
   $('.block-content').empty();
   for (let i = 0; i < courses.length; i++) {
