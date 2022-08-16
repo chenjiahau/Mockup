@@ -130,6 +130,16 @@ a.general:hover {
   border-radius: 32px;
 }
 
+.block-one .btn-small-red {
+  padding: 8px 22px;
+  width: 220px;
+  height: auto;
+  font-size: 16px;
+  background-color: #c0c0c0;
+  color: #fff;
+  border-radius: 32px;
+}
+
 .block-one .btn:hover {
   background-color: #075952;
   color: #fff;
