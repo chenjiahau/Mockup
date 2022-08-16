@@ -152,6 +152,29 @@ a.general:hover {
   padding: 32px;
 }
 
+.block-top {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+
+.block-label {
+  margin: 0 4px 0 0;
+  padding: 8px 24px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  background-color: #075952;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.block-label:hover {
+  background-color: #000;
+}
+
 .block-item {
   display: flex;
   flex-direction: column;
