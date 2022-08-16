@@ -125,7 +125,7 @@ section {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  height: 800px;
+  padding: 64px 0;
   background-color: #89d0ca;
   overflow: hidden;
 }
@@ -155,7 +155,7 @@ section {
 
 .section-form {
   flex-direction: column;
-  padding: 32px 0;
+  padding: 128px 0;
   background-color: #89d0ca;
 }
 
@@ -167,5 +167,5 @@ section {
 .section-account .container {
   flex-direction: column;
   width: 80%;
-  padding: 128px 0;
+  padding: 64px 0;
 }
