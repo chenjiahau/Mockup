@@ -10,9 +10,58 @@
   <link href="./css/style.css" rel="stylesheet">
   <link href="./css/common.css" rel="stylesheet">
   <link href="./css/form.css" rel="stylesheet">
+  <link href="./css/modal.css" rel="stylesheet">
   <link href="./css/message.css" rel="stylesheet">
 </head>
 <body>
+  <div class="modal" style="display: none;">
+    <div class="modal-body modal-general-size">
+      <div class="modal-header">
+        <div class="modal-title">
+          Basic JavaScript
+        </div>
+        <div class="modal-close btn-modal">
+          &times;
+        </div>
+      </div>
+      <div class="modal-content">
+        <div class="label">Course Name</div>
+        <div class="group">
+          <input
+           type="text"
+           placeholder="Enter course name"
+           value="Basic JavaScript"
+          />
+        </div>
+        <div class="label">Hours</div>
+        <div class="group">
+          <input
+            type="number"
+            value="2"
+            placeholder="Enter total hours"
+          />
+        </div>
+        <div class="label">Articles</div>
+        <div class="group">
+          <input
+            type="number"
+            value="2"
+            placeholder="Enter total articles"
+          />
+        </div>
+        <div class="label">Description</div>
+        <div class="group">
+          <textarea placeholder="Please describe this course">Vaunted within his only to aye could seemed isle a whom, saw a and calm been there, his feels hight.
+          </textarea>
+        </div>
+      </div>
+      <div class="modal-content modal-action">
+        <div class="btn-submit btn-modal">Save</div>
+        <div class="btn-submit btn-modal btn-cancel">Cancel</div>
+      </div>
+    </div>
+  </div>
+
   <header>
     <a href="index.html">
       <div class="logo"></div>
@@ -37,8 +86,51 @@
 
   <section class="section-account">
     <div class="container">
-      <div class="block-content">
+      <div class="block-top">
+        <div class="block-label block-active-label tab courses-tab">Courses</div>
+        <div class="block-label tab open-tab">Open</div>
       </div>
+      <div class="block-content content courses-content">
+        1
+      </div>
+      <div class="block-content content open-content" style="display: none">
+        <div class="label">Course Name</div>
+        <div class="group">
+          <input
+           type="text"
+           placeholder="Enter course name"
+          />
+        </div>
+        <div class="label">Hours</div>
+        <div class="group">
+          <input
+            type="number"
+            value="1"
+            placeholder="Enter total hours"
+          />
+        </div>
+        <div class="label">Articles</div>
+        <div class="group">
+          <input
+            type="number"
+            value="1"
+            placeholder="Enter total articles"
+          />
+        </div>
+        <div class="label">Description</div>
+        <div class="group">
+          <textarea placeholder="Please describe this course"></textarea>
+        </div>
+        <div class="action">
+          <div class="btn btn-submit">
+            Save
+          </div>
+          <div class="btn btn-submit btn-cancel">
+            Cancel
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <footer>
@@ -62,5 +154,80 @@
     }
 
     window.location.href = path;
+  });
+
+  $('.tab').click(function() {
+    $('.tab').removeClass('block-active-label');
+
+    const label = $(this).html().toLocaleLowerCase();
+    $(`.${label}-tab`).addClass('block-active-label');
+
+    $('.content').css('display', 'none');
+    $(`.${label}-content`).css('display', 'block');
+  });
+
+  const courses = [
+    {
+      id: 1,
+      title: "Basic JavaScript",
+      description: "Vaunted within his only to aye could seemed isle a whom, saw a and calm been there, his feels hight.",
+      numberOfHour: 2,
+      numberOfArticle: 2,
+      numberOfStudents: 30,
+      openDate: '2022-08-16'
+    },
+    {
+      id: 2,
+      title: "Advance of Python",
+      description: "Maravigliose in noi e delle manifestamente sí sí e cosa, ci cosa.",
+      numberOfHour: 10,
+      numberOfArticle: 5,
+      numberOfStudents: 30,
+      openDate: '2022-01-30'
+    },
+  ];
+
+  $('.courses-content').empty();
+  for (let i = 0; i < courses.length; i++) {
+    let id = i + 1;
+    if (id < 10) id = '0' + id;
+
+    $('.courses-content').append(`
+      <div class="block-one">
+        <div class="block-item">
+          <div class="header">
+            <div class="left">
+              #${id} ${courses[i].title}
+            </div>
+          </div>
+          <div class="body">
+            <div class="text">Open at ${courses[i].openDate}</div>
+          </div>
+          <div class="body">
+            <div class="left">
+              <div class="text-title">${courses[i].description}</div>
+            </div>
+            <div class="right">
+              <div class="text-item">Hours: ${courses[i].numberOfHour}</div>
+              <div class="text-item">Articles: ${courses[i].numberOfArticle}</div>
+              <div class="text-item">Students: ${courses[i].numberOfStudents}</div>
+            </div>
+          </div>
+          <div class="footer">
+            <div class="btn btn-small-blue">
+              Edit
+            </div>
+          </div>
+        </div>
+      </div>
+    `);
+  }
+
+  $('.btn-small-blue').click(function() {
+    $('.modal').toggle();
+  });
+
+  $('.btn-modal').click(function() {
+    $('.modal').toggle();
   });
 </script>

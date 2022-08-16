@@ -38,7 +38,7 @@
   <section class="section-account">
     <div class="container">
       <div class="block-top">
-        <div class="block-label info"></div>
+        <div class="block-label block-active-label info">Courses</div>
       </div>
       <div class="block-content list"></div>
     </div>
@@ -114,11 +114,6 @@
       numberOfStudents: 30
     }
   ];
-
-  $('.info')
-    .empty()
-    .append('Total Courses: ' + courses.length);
-
 
   $('.list').empty();
   for (let i = 0; i < courses.length; i++) {
