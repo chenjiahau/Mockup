@@ -7,6 +7,10 @@
 }
 
 .main-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
   font-size: 52px;
   line-height: 72px;
 }
@@ -14,7 +18,7 @@
 .main-title .light {
   font-size: 52px;
   font-weight: 200;
-  margin-right: 8px;
+  margin-right: 18px;
   color: #fff;
 }
 
@@ -303,7 +307,7 @@ a.general:hover {
 
 /* Space */
 .super-large-space {
-  margin: 122px 0 0 0;
+  margin: 88px 0 0 0;
 }
 
 .large-space {

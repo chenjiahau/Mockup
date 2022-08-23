@@ -140,6 +140,18 @@ section {
   width: 80%;
 }
 
+.container .top {
+  display: none;
+}
+
+.container .top img {
+  width: 30%;
+}
+
+.container .bottom {
+  display: none;
+}
+
 .container .left {
   width: 50%;
   margin-right: 32px;
