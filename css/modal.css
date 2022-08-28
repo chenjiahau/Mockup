@@ -18,7 +18,8 @@
 }
 
 .modal-general-size {
-  width: 800px;
+  width: 60%;
+  max-width: 800px;
 }
 
 .modal-header {
