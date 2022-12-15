@@ -15,17 +15,33 @@ const drawChart = async () => {
     .attr('width', dimension.width)
     .attr('height', dimension.height);
 
+  const apparentTemperatureList = [];
+  const humidityList = [];
+
+  for (let d of data) {
+    apparentTemperatureList.push(d.currently.apparentTemperature);
+    humidityList.push(d.currently.humidity);
+  }
+
   // ctr === container
   const ctr = svg.append('g')
     .attr('transform', `translate(${dimension.margin.top}, ${dimension.margin.left})`);
 
-  console.log(ctr);
+  const xScale = d3.scaleLinear()
+    .domain([d3.min(humidityList), d3.max(humidityList)])
+    .range([0, dimension.width - dimension.margin.left * 2]);
+
+  const yAccessor = d => d.currently.apparentTemperature;
+  const yScale = d3.scaleLinear()
+    .domain(d3.extent(data, yAccessor))
+    .range([0, dimension.width - dimension.margin.top * 2]);
+
   ctr
-    .selectAll() // 沒有selectAll會append到body外？用select也不行
+    .selectAll('circle') // 沒有selectAll會append到body外？用select也不行
     .data(data)
     .join('circle')
-    .attr('cx', (d) => d.currently.humidity)
-    .attr('cy', (d) => d.currently.apparentTemperature)
+    .attr('cx', d => xScale(d.currently.humidity)) // 把value丟給xScale，mapping到document上相對的位置
+    .attr('cy', d => yScale(yAccessor(d)))
     .attr('r', 10)
     .attr('fill', '#ff0000')
 }
