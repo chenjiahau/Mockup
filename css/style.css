@@ -16,3 +16,21 @@ body {
   font-size: 16px;
   fill: green;
 }
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #fff;
+}
+
+.x-axis-label {
+  font-size: 16px;
+  fill: red;
+}
+
+.y-axis-label {
+  font-size: 16px;
+  fill: green;
+}
