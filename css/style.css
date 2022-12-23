@@ -7,30 +7,11 @@ body {
   background-color: #fff;
 }
 
-.x-axis-label {
-  font-size: 16px;
-  fill: red;
+.container {
+  margin: 16px;
 }
 
-.y-axis-label {
-  font-size: 16px;
-  fill: green;
-}
-* {
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  background-color: #fff;
-}
-
-.x-axis-label {
-  font-size: 16px;
-  fill: red;
-}
-
-.y-axis-label {
-  font-size: 16px;
-  fill: green;
+.x-tick-label {
+  /* transform: rotate(-45deg); */
+  /* text-anchor: end; */
 }
