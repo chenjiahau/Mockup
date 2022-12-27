@@ -10,3 +10,9 @@ body {
 .container {
   margin: 32px auto;
 }
+
+.label {
+  text-anchor: middle;
+  font-size: 12px;
+  stroke: #fff;
+}

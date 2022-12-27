@@ -50,16 +50,16 @@ const drawChart = async () => {
     .attr('d', artPath)
     .attr('stroke', pieChart.stroke.color)
     .attr('stroke-width', pieChart.stroke.width)
-    .attr('fill', d => colour(d.data.name))
+    .attr('fill', d => colour(d.data.name));
 
   paths.enter()
     .append('text')
     .text(d => {
-      return d.data.name
+      if (d.data.p > 0)
+        return d.data.name
     })
     .attr('transform', d => `translate(${artPath.centroid(d)})`)
-    .style("text-anchor", "middle")
-    .style("font-size", 12)
+    .classed('label', true);
 }
 
 drawChart()
