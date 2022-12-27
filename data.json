@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "name": "Basketball",
+    "p": 3000
+  },
+  {
+    "name": "Baskball",
+    "p": 2000
+  },
+  {
+    "name": "Football",
+    "p": 1000
+  },
+  {
+    "name": "Biking",
+    "p": 0
+  },
+  {
+    "name": "Waking",
+    "p": 5000
+  }
+]

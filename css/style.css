@@ -6,3 +6,7 @@
 body {
   background-color: #fff;
 }
+
+.container {
+  margin: 32px auto;
+}
