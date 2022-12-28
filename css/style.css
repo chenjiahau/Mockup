@@ -16,3 +16,14 @@ body {
   font-size: 12px;
   stroke: #fff;
 }
+
+.tooltip {
+  position: absolute;
+  text-align: center;
+  border: 0px;
+  border-radius: 4px;
+  pointer-events: none;
+  margin: 32px;
+  padding: 8px 16px;
+  background-color: #c0c0c0;
+}

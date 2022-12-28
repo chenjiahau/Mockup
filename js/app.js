@@ -45,7 +45,6 @@ const drawChart = async () => {
   const paths = graph.selectAll('path')
     .data(pie(data));
 
-
   const arcTweenEnter = (d) => {
     var i = d3.interpolate(d.endAngle - 0.1, d.startAngle);
 
@@ -61,7 +60,7 @@ const drawChart = async () => {
     .attr('stroke', pieChart.stroke.color)
     .attr('stroke-width', pieChart.stroke.width)
     .attr('fill', d => colour(d.data.name))
-    .transition().duration(3000).attrTween("d", arcTweenEnter);
+    .transition().duration(1000).attrTween("d", arcTweenEnter);
 
   paths.enter()
     .append('text')
@@ -71,6 +70,57 @@ const drawChart = async () => {
     })
     .attr('transform', d => `translate(${arcPath.centroid(d)})`)
     .classed('label', true);
+
+  const div = d3.select('body')
+    .append('div')
+    .attr('class', 'tooltip')
+    .style('opacity', 0);
+
+  const handleMouseover = (e, d) => {
+    d3.select(e.currentTarget)
+      .attr('fill', '#000')
+
+    div.transition()
+      .duration(1000)
+      .style('opacity', .9);
+    div.html(d.data.p)
+      .style('left', (e.pageX) + 'px')
+      .style('top', (e.pageY - 28) + 'px');
+  }
+
+  const handleMousemove = (e, d) => {
+    const content = `
+        <div class='content'>${d.data.p}</div>
+      `;
+    div.html(content)
+      .style('left', (e.pageX - 10) + 'px')
+      .style('top', (e.pageY - 48) + 'px');
+  }
+
+  const handleMouseout = (e, d) => {
+    d3.select(e.currentTarget)
+      .attr('fill', colour(d.data.name))
+
+    div.transition()
+      .duration(500)
+      .style('opacity', 0);
+  }
+
+  const handleClick = (d) => {
+    console.log(d);
+  }
+
+  graph.selectAll('path')
+    .on('mouseover', (e, d) => {
+      handleMouseover(e, d);
+    })
+    .on('mousemove', (e, d) => {
+      handleMousemove(e, d);
+    })
+    .on('mouseout', (e, d) => {
+      handleMouseout(e, d);
+    })
+    .on('click', handleClick);
 }
 
 drawChart()
