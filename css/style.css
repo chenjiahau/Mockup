@@ -6,13 +6,3 @@
 body {
   background-color: #fff;
 }
-
-.x-axis-label {
-  font-size: 16px;
-  fill: red;
-}
-
-.y-axis-label {
-  font-size: 16px;
-  fill: green;
-}
