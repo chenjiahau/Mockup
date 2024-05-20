@@ -1,0 +1,31 @@
+.header {
+  width: 100%;
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+.header .header_left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-left: 16px;
+}
+.header .header_left h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-family: var(--title-font);
+  color: var(--white-color);
+}
+.header .header_left .logo {
+  width: 48px;
+}
+.header .header_right {
+  padding-top: 18px;
+  padding-right: 32px;
+}
+.header .header_right .user {
+  color: var(--white-color);
+}/*# sourceMappingURL=header.css.map */

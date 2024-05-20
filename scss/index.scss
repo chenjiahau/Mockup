@@ -1,0 +1,29 @@
+.login-section {
+}
+
+.login-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--gray-color);
+  border-radius: 8px;
+  padding: 32px;
+
+  &__title {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__body {
+    width: 100%;
+    margin: 16px 0;
+  }
+
+  .button {
+    width: 148px;
+  }
+}
