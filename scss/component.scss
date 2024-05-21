@@ -4,10 +4,6 @@
   margin: 8px 0;
 }
 
-.section {
-  padding: 20px;
-}
-
 .disabled {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   cursor: not-allowed !important;
@@ -15,6 +11,12 @@
   &:hover {
     background-color: var(--white-color) !important;
   }
+}
+
+.header-title {
+  font-family: var(--title-font);
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 .button {

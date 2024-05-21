@@ -1,4 +1,8 @@
 .login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .login-block {
@@ -9,6 +13,18 @@
   background-color: var(--gray-color);
   border-radius: 8px;
   padding: 32px;
+  width: 480px;
+
+  &__logo {
+    margin-bottom: 16px;
+    border-radius: 50%;
+    background-color: var(--third-color);
+    padding: 8px;
+
+    img {
+      width: 90px;
+    }
+  }
 
   &__title {
     font-size: 24px;
@@ -16,6 +32,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--primary-color);
   }
 
   &__body {

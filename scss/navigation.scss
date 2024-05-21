@@ -13,13 +13,14 @@
     width: 200px;
     background-color: var(--white-color);
     margin: 8px;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     padding: 16px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     color: var(--black-color);
     display: flex;
     align-items: center;
     gap: 8px;
+    text-decoration: none;
 
     i {
       padding-top: 1px;
@@ -31,6 +32,7 @@
 
     &:hover {
       background-color: var(--secondary-color);
+      font-weight: bold;
     }
   }
 }
