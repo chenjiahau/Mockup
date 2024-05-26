@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Management Information System</title>
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <link href="./css/component.css" rel="stylesheet">
+  <link href="./css/layout.css" rel="stylesheet">
+  <link href="./css/header.css" rel="stylesheet">
+  <link href="./css/navigation.css" rel="stylesheet">
+  <link href="./css/category.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="layout">
+    <div class='layout__header'>
+      <div class='header'>
+        <div class='header_left'>
+          <img src="./img/brand.png" alt='logo' class='logo' />
+          <h1>Management Information System</h1>
+        </div>
+        <div class='header_right'>
+          Hi! <span class='user'>xxx@xxx.xxx</span> | 
+          <span class='link-button'>
+            Logout
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="layout__content">
+      <div class="content__left">
+        <div class='navigation'>
+          <button class='button nav_link'>
+            <a href="dashboard.html">
+              <i class='fa-solid fa-chart-simple'></i>
+              <span>Dashboard</span>
+            </a>
+          </button>
+          <button class='button nav_link'>
+            <a href="category.html">
+              <i class="fa-solid fa-list"></i>
+              <span>Category</span>
+            </a>
+          </button>
+          <button class='button nav_link'>
+            <a href="record.html">
+              <i class='fa-solid fa-record-vinyl'></i>
+              <span>Record</span>
+            </a>
+          </button>
+          <button class='button nav_link'>
+            <a href="setting.html">
+              <i class='fa-solid fa-bars'></i>
+              <span>Setting</span>
+            </a>
+          </button>
+        </div>
+      </div>
+      <div class="content__right">
+        <div class="breadcrumb-container">
+          <a class="breadcrumb-container-item">Category</a>
+        </div>
+        <div class="section">
+          <div class="mb-2">
+            <input
+              type='text'
+              name='category'
+              id='category'
+              class='form-control'
+              placeholder='New category'
+              required
+            />
+          </div>
+          <div class="text-right">
+            <button class='button w-100'>
+              <i class='fa-solid fa-plus'></i>
+              <span>Add</span>
+            </button>
+          </div>
+        </div>
+        <div class="section">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>名稱</th>
+                <th class="text-center" width="160">子類別數量</th>
+                <th width="160">狀態</th>
+                <th width="160">行動</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="edit-input">
+                    <!-- <a class="link-button">Company</a> -->
+                    <input 
+                      type="text" 
+                      class="form-control" 
+                      value="Company"
+                    />
+                    <div class="edit-input-icon">
+                      <div><i class="fa-solid fa-check"></i></div>
+                      <div><i class="fa-solid fa-xmark"></i></div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div 
+                    class="text-center edit-button"
+                    data-toggle="modal" 
+                    data-target="#subcategoryListModal"
+                  >
+                    3
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <input class="mr-2" type="radio" name="status1" value="1" checked>
+                    <label class="mr-2" for="status">啟用</label>
+                    <input class="mr-2" type="radio" name="status1" value="0">
+                    <label class="mr-2" for="status">停用</label>
+                    </div>
+                </td>
+                <td class="table-action-td">
+                  <div>
+                    <button 
+                      class="button delete-button delete-category" 
+                      data-toggle="modal" 
+                      data-target="#confirmationModal"
+                    >
+                      刪除
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="edit-button">Myself</div>
+                </td>
+                <td>
+                  <div 
+                    class="text-center edit-button"
+                    data-toggle="modal" 
+                    data-target="#subcategoryListModal"
+                  >
+                    3
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <input class="mr-2" type="radio" name="status2" value="1" checked>
+                    <label class="mr-2" for="status">啟用</label>
+                    <input class="mr-2" type="radio" name="status2" value="0">
+                    <label class="mr-2" for="status">停用</label>
+                    </div>
+                </td>
+                <td>
+                  <div>
+                    <button 
+                      class="button delete-button delete-category" 
+                      data-toggle="modal" 
+                      data-target="#confirmationModal"
+                    >
+                      刪除
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="layout__footer">
+      <span>&#169;ISP-START</span>
+    </div>
+  </div>
+
+  <div id="subcategoryListModal" class="modal fade" aria-hidden="true">
+    <div class="modal-dialog modal-dialog_800">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Sub-category</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-2">
+            <input
+              type='text'
+              name='category'
+              id='category'
+              class='form-control'
+              placeholder='New sub-category'
+              required
+            />
+          </div>
+          <div class="mb-2 text-right">
+            <button class='button w-100'>
+              <i class='fa-solid fa-plus'></i>
+              <span>Add</span>
+            </button>
+          </div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>名稱</th>
+                <th width="160">狀態</th>
+                <th width="160">行動</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <!-- <div><a class="link-button">E-mail</a></div> -->
+                  <div class="edit-input">
+                    <!-- <a class="link-button">Company</a> -->
+                    <input 
+                      type="text" 
+                      class="form-control" 
+                      value="E-mail"
+                    />
+                    <div class="edit-input-icon">
+                      <div><i class="fa-solid fa-check"></i></div>
+                      <div><i class="fa-solid fa-xmark"></i></div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <input class="mr-2" type="radio" name="sub-status1" value="1" checked>
+                    <label class="mr-2" for="status">啟用</label>
+                    <input class="mr-2" type="radio" name="sub-status1" value="0">
+                    <label class="mr-2" for="status">停用</label>
+                    </div>
+                </td>
+                <td>
+                  <div>
+                    <button 
+                      class="button delete-button delete-sub-category" 
+                      data-toggle="modal" 
+                      data-target="#confirmationModal"
+                    >
+                      刪除
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="edit-button">Gitlab</div>
+                </td>
+                <td>
+                  <div>
+                    <input class="mr-2" type="radio" name="sub-status2" value="1" checked>
+                    <label class="mr-2" for="status">啟用</label>
+                    <input class="mr-2" type="radio" name="sub-status2" value="0">
+                    <label class="mr-2" for="status">停用</label>
+                    </div>
+                </td>
+                <td>
+                  <div>
+                    <button 
+                      class="button delete-button delete-sub-category" 
+                      data-toggle="modal" 
+                      data-target="#confirmationModal"
+                    >
+                      刪除
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="edit-button">Skype</div>
+                </td>
+                <td>
+                  <div>
+                    <input class="mr-2" type="radio" name="sub-status3" value="1" checked>
+                    <label class="mr-2" for="status">啟用</label>
+                    <input class="mr-2" type="radio" name="sub-status3" value="0">
+                    <label class="mr-2" for="status">停用</label>
+                    </div>
+                </td>
+                <td>
+                  <div>
+                    <button 
+                      class="button delete-button delete-sub-category" 
+                      data-toggle="modal" 
+                      data-target="#confirmationModal"
+                    >
+                      刪除
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="edit-button">E-mail</div>
+                </td>
+                <td>
+                  <div>
+                    <input class="mr-2" type="radio" name="sub-status4" value="1" checked>
+                    <label class="mr-2" for="status">啟用</label>
+                    <input class="mr-2" type="radio" name="sub-status4" value="0">
+                    <label class="mr-2" for="status">停用</label>
+                    </div>
+                </td>
+                <td>
+                  <div>
+                    <button 
+                      class="button delete-button delete-sub-category" 
+                      data-toggle="modal" 
+                      data-target="#confirmationModal"
+                    >
+                      刪除
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="button cancel-button" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="confirmationModal" class="modal fade" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Confirmation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Do you want to delete it?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="button cancel-button" data-dismiss="modal">Close</button>
+          <button type="button" class="button delete-button">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+<script src="./js/jquery.min.js"></script>
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="./js/function.js"></script>
+
+<script>
+</script>

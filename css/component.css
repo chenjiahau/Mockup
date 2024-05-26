@@ -1,3 +1,10 @@
+.section {
+  margin-top: 16px;
+  border: 1px solid var(--primary-color);
+  padding: 16px;
+  border-radius: 8px;
+}
+
 .divider {
   border-top: 1px solid var(--primary-color);
   width: 100%;
@@ -46,6 +53,20 @@
   color: var(--black-color);
 }
 
+.delete-button {
+  background-color: var(--danger-color);
+  color: var(--white-color);
+  cursor: pointer;
+  text-align: center;
+  padding: 8px 24px;
+  border-radius: 4px;
+  border: none;
+}
+.delete-button:hover {
+  background-color: var(--danger-color);
+  color: var(--black-color);
+}
+
 .link-button {
   color: var(--primary-color);
   cursor: pointer;
@@ -53,4 +74,155 @@
 }
 .link-button:hover {
   color: var(--primary-color);
+}
+
+.edit-button {
+  color: var(--primary-color);
+  cursor: pointer;
+  text-decoration: underline;
+}
+.edit-button:hover {
+  background-color: var(--third-color);
+  color: var(--black-color);
+}
+
+.breadcrumb-container {
+  border: 1px solid var(--primary-color);
+  border-radius: 0.3rem;
+  display: inline-flex;
+  overflow: hidden;
+}
+.breadcrumb-container-item {
+  background: var(--white-color);
+  color: var(--black-color);
+  outline: none;
+  width: 120px;
+  padding: 8px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.breadcrumb-container-item:hover:after, .breadcrumb-container-item:hover {
+  background: var(--primary-color);
+  color: var(--white-color);
+  text-decoration: none;
+}
+.breadcrumb-container-item:focus:after, .breadcrumb-container-item:focus, .breadcrumb-container-item.is-active:focus {
+  background: var(--primary-color);
+  color: var(--white-color);
+}
+.breadcrumb-container-item:after, .breadcrumb-container-item:before {
+  background: var(--white-color);
+  bottom: 0;
+  -webkit-clip-path: polygon(50% 50%, -50% -50%, 0 100%);
+          clip-path: polygon(50% 50%, -50% -50%, 0 100%);
+  content: "";
+  left: 100%;
+  position: absolute;
+  top: 0;
+  width: 1em;
+  z-index: 1;
+}
+.breadcrumb-container-item:before {
+  background: var(--primary-color);
+  margin-left: 1px;
+}
+.breadcrumb-container-item:last-child {
+  border-right: none;
+}
+.breadcrumb-container-item.is-active {
+  background: var(--primary-color);
+}
+
+.edit-input {
+  border: 1px solid var(--primary-color);
+  background-color: var(--white-color);
+  border-radius: 4px;
+  width: 100%;
+  position: relative;
+  padding: 0 !important;
+  margin: 4px 8px 8px 8px;
+  display: grid !important;
+  grid-template-columns: 1fr 48px;
+  gap: 8px;
+}
+.edit-input .form-control:focus {
+  background: transparent !important;
+  border: none !important;
+}
+.edit-input input {
+  border: none;
+  width: 98%;
+  outline: none;
+}
+.edit-input-icon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: flex;
+  gap: 8px;
+}
+.edit-input-icon div {
+  padding: 0 !important;
+}
+
+.table {
+  border-collapse: collapse;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.table thead tr {
+  background-color: var(--black-color);
+  color: var(--white-color);
+  text-align: left;
+}
+.table th {
+  padding: 8px 16px;
+}
+.table td div {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+}
+.table td div.text-center {
+  justify-content: center;
+}
+.table tbody tr {
+  cursor: pointer;
+}
+.table tbody tr:hover {
+  background-color: var(--third-color);
+}
+.table tr:nth-of-type(even) {
+  background-color: var(--gray-color);
+}
+.table tr:nth-of-type(even):hover {
+  background-color: var(--third-color);
+}
+.table-action-td {
+  text-align: right;
+}
+
+.modal-dialog_600 {
+  max-width: 600px;
+}
+
+.modal-dialog_700 {
+  max-width: 700px;
+}
+
+.modal-dialog_800 {
+  max-width: 800px;
+}
+
+.modal-dialog_900 {
+  max-width: 900px;
+}
+
+.modal-dialog_1000 {
+  max-width: 1000px;
 }/*# sourceMappingURL=component.css.map */

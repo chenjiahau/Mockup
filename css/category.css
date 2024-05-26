@@ -1,0 +1,13 @@
+.category-section-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}
+.category-section-header-input {
+  grid-column: 1/2;
+}
+.category-section-header-button {
+  grid-column: 2/3;
+}/*# sourceMappingURL=category.css.map */

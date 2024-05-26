@@ -1,5 +1,5 @@
 .navigation {
-  padding: 8px;
+  padding: 6px;
   border: 4px solid var(--primary-color);
   border-top: none;
   display: flex;
@@ -14,25 +14,36 @@
     background-color: var(--white-color);
     margin: 8px;
     font-size: 1.1rem;
-    padding: 16px;
+    padding: 0;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     color: var(--black-color);
     display: flex;
     align-items: center;
-    gap: 8px;
     text-decoration: none;
 
-    i {
-      padding-top: 1px;
-    }
+    a {
+      display: inline-block;
+      color: var(--black-color);
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+      text-align: left;
+      padding: 8px 16px;
 
-    span {
-      padding-top: 2px;
-    }
+      &:hover {
+        background-color: var(--black-color);
+        color: var(--white-color);
+        font-weight: bold;
+      }
 
-    &:hover {
-      background-color: var(--secondary-color);
-      font-weight: bold;
+      i {
+        padding-top: 1px;
+        margin-right: 8px;
+      }
+
+      span {
+        padding-top: 2px;
+      }
     }
   }
 }

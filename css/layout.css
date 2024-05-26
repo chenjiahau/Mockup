@@ -42,6 +42,7 @@ body {
   align-items: center;
   position: fixed;
   width: 100%;
+  z-index: 999;
 }
 
 .layout__content {
@@ -71,7 +72,24 @@ body {
   text-align: center;
 }
 
+label {
+  margin: 0 !important;
+}
+
+td {
+  padding: 0 !important;
+  vertical-align: middle !important;
+}
+
 .form-control:focus {
   border: 1px solid var(--primary-color);
   box-shadow: none;
+}
+
+.table {
+  margin: 0;
+}
+
+.form-control {
+  border: 1px solid var(--primary-color);
 }/*# sourceMappingURL=layout.css.map */

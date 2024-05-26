@@ -1,5 +1,5 @@
 .navigation {
-  padding: 8px;
+  padding: 6px;
   border: 4px solid var(--primary-color);
   border-top: none;
   display: flex;
@@ -14,21 +14,31 @@
   background-color: var(--white-color);
   margin: 8px;
   font-size: 1.1rem;
-  padding: 16px;
+  padding: 0;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   color: var(--black-color);
   display: flex;
   align-items: center;
-  gap: 8px;
   text-decoration: none;
 }
-.navigation .nav_link i {
-  padding-top: 1px;
+.navigation .nav_link a {
+  display: inline-block;
+  color: var(--black-color);
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  padding: 8px 16px;
 }
-.navigation .nav_link span {
-  padding-top: 2px;
-}
-.navigation .nav_link:hover {
-  background-color: var(--secondary-color);
+.navigation .nav_link a:hover {
+  background-color: var(--black-color);
+  color: var(--white-color);
   font-weight: bold;
+}
+.navigation .nav_link a i {
+  padding-top: 1px;
+  margin-right: 8px;
+}
+.navigation .nav_link a span {
+  padding-top: 2px;
 }/*# sourceMappingURL=navigation.css.map */
