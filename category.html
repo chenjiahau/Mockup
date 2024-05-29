@@ -173,6 +173,43 @@
             </tbody>
           </table>
         </div>
+        <div class="section">
+          <div class="pagination">
+            <div class="pagination-item arrow">
+              <i class="fa-solid fa-caret-left"></i>
+            </div>
+            <div class="pagination-item">1</div>
+            <div class="pagination-item">2</div>
+            <div class="pagination-item is-active">3</div>
+            <div class="pagination-item">4</div>
+            <div class="pagination-item">5</div>
+            <div class="pagination-item arrow">
+              <i class="fa-solid fa-caret-right"></i>
+            </div>
+            <div class="dropdown">
+              <div class="item">
+                <span class="text">10</span>
+                <span>
+                  <i class="fa-solid fa-sort-up arrow-up hidden"></i>
+                  <i class="arrow fa-solid fa-sort-down arrow-down"></i>
+                </span>
+              </div>
+              <ul class="options">
+                <li class="option">
+                  <span>5</span>
+                </li>
+                <li class="option is-active">
+                  <span>10</span>
+                </li>
+                <li class="option">
+                  <span>20</span>
+                </li>
+                <li class="option">
+                  <span>50</span>
+                </li>
+              </ul>
+            </div>
+        </div>
       </div>
     </div>
 
@@ -358,7 +395,11 @@
 
 <script src="./js/jquery.min.js"></script>
 <script src="./js/bootstrap.bundle.min.js"></script>
+<script src="./js/common.js"></script>
 <script src="./js/function.js"></script>
 
 <script>
+  openDropdown();
+  closeDropdown();
+  
 </script>

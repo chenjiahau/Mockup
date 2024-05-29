@@ -196,6 +196,103 @@
   }
 }
 
+// Dropdown
+.dropdown,
+.dropdown-keep-open {
+  position: relative;
+  overflow: visible;
+  height: 34px;
+
+  & .item {
+    display: grid;
+    grid-template-columns: 1fr 10px;
+    width: 64px;
+    height: 34px;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    padding: 4px 8px;
+    background: #fff;
+    font-weight: 400;
+    cursor: pointer;
+
+    &--small {
+      width: 64px;
+    }
+
+    &--medium {
+      width: 120px;
+    }
+
+    &--large {
+      width: 160px;
+    }
+
+    & .text {
+      text-align: center;
+    }
+
+    & i.arrow-up {
+      transform: translateY(4px);
+    }
+
+    & i.arrow-down {
+      transform: translateY(-2px);
+    }
+
+    & .hidden {
+      display: none;
+    }
+
+    & .up {
+      transform: translateY(4px) rotate(180deg);
+    }
+  }
+
+  & .options {
+    position: relative;
+    width: 64px;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 0 3px var(--primary-color);
+    top: 9px;
+    overflow: hidden;
+    display: none;
+
+    &--small {
+      width: 64px;
+    }
+
+    &--medium {
+      width: 120px;
+    }
+
+    &--large {
+      width: 160px;
+    }
+  }
+
+  &.active .options {
+    display: block;
+  }
+
+  & .options .option {
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+
+    &:hover {
+      background-color: var(--third-color);
+    }
+  }
+
+  & .options .option.is-active {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+  }
+}
+
 // Table
 .table {
   border-collapse: collapse;
@@ -263,4 +360,31 @@
 
 .modal-dialog_1000 {
   max-width: 1000px;
+}
+
+// Pagination
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  &-item {
+    background-color: var(--white-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    color: var(--black-color);
+    cursor: pointer;
+    padding: 4px 8px;
+
+    &:hover {
+      background-color: var(--third-color);
+    }
+
+    &.is-active {
+      background-color: var(--primary-color);
+      color: var(--white-color);
+      cursor: default;
+    }
+  }
 }
