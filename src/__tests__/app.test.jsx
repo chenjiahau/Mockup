@@ -1,18 +1,28 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { logRoles } from "@testing-library/dom";
 
 import App from "../App";
 import { expect } from "vitest";
 
-test("renders learn react link", () => {
+test("Render correctly", async () => {
   render(<App />);
-  const titleElement = screen.getByRole("heading", { name: /No title/i });
-  expect(titleElement).toBeInTheDocument();
 
-  const buttonElement = screen.getByRole("button", { name: /Click me/i });
-  expect(buttonElement).toBeInTheDocument();
+  const nameInput = screen.getByLabelText(/name/i);
+  expect(nameInput).toBeInTheDocument();
 
-  fireEvent.click(buttonElement);
-  const newTitleElement = screen.getByRole("heading", { name: /Hello/i });
-  expect(newTitleElement).toBeInTheDocument();
+  const passwordInput = screen.getByLabelText("Password");
+  expect(passwordInput).toBeInTheDocument();
+
+  const confirmPasswordInput = screen.getByLabelText("Confirm Password");
+  expect(confirmPasswordInput).toBeInTheDocument();
+
+  await userEvent.type(nameInput, "John Doe");
+  expect(nameInput).toHaveValue("John Doe");
+
+  await userEvent.type(passwordInput, "password");
+  expect(passwordInput).toHaveValue("password");
+
+  await userEvent.type(confirmPasswordInput, "password");
+  expect(confirmPasswordInput).toHaveValue("password");
 });
