@@ -1,14 +1,20 @@
-import { useState } from "react";
 import "./App.css";
 
-function App() {
-  const [title] = useState("React Mockup");
+import { AppContextProvider } from "./AppContext";
+import Header from "./components/Header";
+import Main from "./components/Main";
+import Footer from "./components/Footer";
 
+function App() {
   return (
     <>
-      <div className='container'>
-        <h1>{title}</h1>
-      </div>
+      <AppContextProvider>
+        <div className='layout'>
+          <Header />
+          <Main />
+          <Footer />
+        </div>
+      </AppContextProvider>
     </>
   );
 }
