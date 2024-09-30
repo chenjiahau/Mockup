@@ -1,6 +1,34 @@
-.container {
+.layout {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  width: 100vw;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #282c34;
+  color: white;
+}
+
+.header :last-child {
+  margin-right: 8px;
+}
+
+.main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  background-color: #fff;
+  color: white;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #282c34;
+  color: white;
 }
