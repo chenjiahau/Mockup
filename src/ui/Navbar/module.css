@@ -1,0 +1,20 @@
+.nav {
+  @apply hidden md:flex flex-wrap gap-2 bg-darkPrimary px-4 lg:px-8 md:px-8 pb-4;
+  font-family: "Poppins", sans-serif;
+}
+
+.nav-item {
+  @apply flex justify-start items-center gap-2 text-white mb-1 px-4 pt-1 h-[60px] text-left rounded-lg bg-primary font-bold;
+}
+
+.nav-item:hover {
+  @apply bg-white text-primary;
+}
+
+.mobile-nav {
+  @apply flex flex-col justify-end items-end px-2;
+}
+
+.mobile-nav-item {
+  @apply block text-heavyGray hover:text-white hover:font-bold my-1;
+}
