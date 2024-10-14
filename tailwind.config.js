@@ -1,3 +1,5 @@
+import { light } from '@fortawesome/fontawesome-svg-core/import.macro';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -9,6 +11,7 @@ export default {
       colors: {
         darkPrimary: '#007bff',
         primary: '#5bbcff',
+        lightPrimary: '#cbe0ff',
         secondary: '#fffab7',
         third: '#ffd1e3',
         fourth: '#7ea1ff',

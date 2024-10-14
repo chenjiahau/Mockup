@@ -8,7 +8,7 @@ function Layout() {
     <>
       <div className='layout'>
         <Navbar />
-        <main className='px-4 lg:px-8 md:px-8'>
+        <main>
           <Outlet />
         </main>
         <Footer />
