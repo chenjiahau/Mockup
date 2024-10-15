@@ -1,0 +1,120 @@
+.table-box {
+  @apply w-full bg-white shadow-md rounded-md border border-primary p-1;
+  overflow-x: auto;
+
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+
+  &:hover {
+    @apply border-hover;
+  }
+
+  table {
+    @apply w-full;
+    border-collapse: collapse;
+
+    thead > tr {
+      @apply border-none;
+    }
+
+    th {
+      @apply bg-transparent;
+    }
+
+    .sortable-box {
+      @apply h-16 flex justify-between items-center border bg-primary rounded-md border-transparent text-white text-xl;
+
+      &:hover {
+        @apply bg-hover border-hover;
+      }
+    }
+
+    .unsortable-box {
+      @apply h-16 flex justify-center items-center bg-primary rounded-md border-transparent text-white text-xl;
+    }
+
+    .sortable {
+      @apply cursor-pointer;
+
+      &:hover {
+        @apply text-white;
+      }
+    }
+
+    .sort-title {
+      @apply ml-4;
+    }
+
+    .sort-icon {
+      @apply w-4 h-4 mr-4;
+    }
+
+    .sorted {
+      @apply bg-primary text-white;
+    }
+
+    tbody > tr {
+      &:hover {
+        background-color: #f9f9f9;
+        border-bottom: 1px solid #0af8f4;
+        cursor: pointer;
+      }
+    }
+
+    .td-box {
+      @apply flex justify-start items-center h-16 border-b border-gray px-4 py-4 text-lg;
+    }
+
+    .td-max {
+      min-width: 120px;
+      max-width: 380px;
+      text-overflow: ellipsis;
+    }
+
+    .center {
+      @apply justify-center;
+    }
+  }
+}
+
+.vertical-table {
+  @apply w-full flex flex-col bg-white text-lg;
+
+  @media screen and (min-width: 1024px) {
+    display: none;
+  }
+
+  @media screen and (max-width: 1023px) {
+    display: block;
+  }
+
+  .row-box {
+    @apply bg-white shadow-md rounded-md border border-primary mb-4 p-4;
+
+    &:hover {
+      @apply border-hover;
+    }
+  }
+
+  .col-box {
+    @apply flex justify-start items-center gap-4 border-b border-gray p-1;
+  }
+
+  .th-box,
+  .th-sort-box {
+    @apply w-64 h-16 flex justify-center items-center bg-primary rounded-md text-white text-xl font-bold;
+  }
+
+  .th-sort-box {
+    @apply cursor-pointer;
+
+    &:hover {
+      @apply bg-hover text-white;
+    }
+  }
+
+  .sorted {
+    @apply flex justify-center items-center border-b px-4 border-gray font-bold;
+  }
+}

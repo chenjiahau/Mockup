@@ -81,7 +81,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      <nav className='nav '>
+      <nav className='nav'>
         <Link to='/' className='nav-item primary-shadow'>
           <FontAwesomeIcon icon={faChartSimple} /> Dashboard
         </Link>

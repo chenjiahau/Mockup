@@ -16,5 +16,5 @@
 }
 
 .mobile-nav-item {
-  @apply block text-heavyGray hover:text-white hover:font-bold my-1;
+  @apply block text-darkGray hover:text-white hover:font-bold my-1;
 }

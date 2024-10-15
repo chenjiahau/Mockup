@@ -1,0 +1,7 @@
+.tag-box {
+  @apply w-32 h-8 flex justify-center items-center rounded-md text-white px-4 py-1 shadow-md;
+}
+
+.clickable {
+  @apply cursor-pointer;
+}

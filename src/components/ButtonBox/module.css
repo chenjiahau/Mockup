@@ -1,0 +1,8 @@
+.button-box {
+  @apply w-[20rem] h-16 flex items-center justify-center bg-darkPrimary rounded-md border-2 border-darkPrimary text-white text-2xl font-bold;
+  cursor: pointer;
+
+  &:hover {
+    @apply bg-hover border-hover;
+  }
+}

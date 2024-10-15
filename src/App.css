@@ -10,6 +10,10 @@ html {
   font-size: 62.5%;
 }
 
+h1 {
+  @apply text-4xl p-0;
+}
+
 .layout {
   display: grid;
   grid-template-rows: auto auto 1fr auto;
@@ -27,4 +31,8 @@ html {
 
 .primary-shadow {
   box-shadow: 4px 6px 4px rgba(91, 188, 255, 0.4);
+}
+
+.spacer {
+  @apply h-8;
 }

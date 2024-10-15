@@ -1,0 +1,11 @@
+.icon-button {
+  @apply w-8 h-8 flex items-center justify-center;
+
+  svg {
+    @apply w-8 h-8 text-primary;
+
+    &:hover {
+      @apply text-active;
+    }
+  }
+}
