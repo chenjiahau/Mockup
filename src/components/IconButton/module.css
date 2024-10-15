@@ -1,0 +1,23 @@
+.icon-button {
+  @apply w-6 h-6 flex items-center justify-center;
+
+  svg {
+    @apply w-6 h-6 text-primary;
+
+    &:hover {
+      @apply text-active;
+    }
+  }
+}
+
+.icon-button__disable {
+  @apply cursor-not-allowed;
+
+  svg {
+    @apply text-darkGray;
+
+    &:hover {
+      @apply text-darkGray;
+    }
+  }
+}

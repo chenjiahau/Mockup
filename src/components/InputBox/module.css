@@ -1,0 +1,24 @@
+input {
+  @apply w-full h-full bg-white outline-none;
+}
+
+.input-box {
+  @apply h-12 bg-white px-4 rounded-md border border-primary hover:border-hover;
+}
+
+.input-box-with-icon {
+  @apply h-12 flex items-center gap-2 bg-white px-4 rounded-lg border border-primary;
+
+  &:hover {
+    @apply border-hover;
+  }
+
+  svg {
+    @apply w-6 h-6 text-primary;
+    cursor: pointer;
+
+    &:hover {
+      @apply text-hover;
+    }
+  }
+}

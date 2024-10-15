@@ -9,6 +9,7 @@ import Categories from "./pages/Categories";
 import Tags from "./pages/Tags";
 import Documents from "./pages/Documents";
 import Settings from "./pages/Settings";
+import Example from "./pages/Example";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/tags' element={<Tags />} />
         <Route path='/documents' element={<Documents />} />
         <Route path='/settings' element={<Settings />} />
+        <Route path='/example' element={<Example />} />
       </Route>
     </Routes>
   );

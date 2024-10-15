@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className='bg-darkPrimary custom-container'>
+      <nav className='bg-darkPrimary custom-container !py-4'>
         <div className='flex items-center justify-between'>
           <div className='flex items-center gap-2'>
             <div className='text-white text-2xl font-bold bg-primary rounded-[50%] p-2'>
@@ -50,9 +50,9 @@ const Navbar = () => {
           <div className='hidden md:flex gap-2'>
             <div className='text-white'>Hi, Admin</div>
             <div className='text-white'>|</div>
-            <a href='#' className='text-white hover:text-gray-300'>
+            <Link to='/' className='text-white hover:text-primary'>
               Logout
-            </a>
+            </Link>
           </div>
         </div>
         <div
@@ -81,7 +81,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      <nav className='nav '>
+      <nav className='nav'>
         <Link to='/' className='nav-item primary-shadow'>
           <FontAwesomeIcon icon={faChartSimple} /> Dashboard
         </Link>

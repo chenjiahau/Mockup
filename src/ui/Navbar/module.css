@@ -1,5 +1,13 @@
+nav {
+  @media (max-width: 768px) {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+}
+
 .nav {
-  @apply hidden md:flex flex-wrap gap-2 bg-darkPrimary px-4 lg:px-8 md:px-8 pb-4;
+  @apply hidden md:flex flex-wrap gap-3 bg-darkPrimary px-4 lg:px-8 md:px-8 pb-4;
   font-family: "Poppins", sans-serif;
 }
 
@@ -8,13 +16,13 @@
 }
 
 .nav-item:hover {
-  @apply bg-white text-primary;
+  @apply bg-hover text-white;
 }
 
 .mobile-nav {
-  @apply flex flex-col justify-end items-end px-2;
+  @apply flex flex-col justify-end items-end px-2 py-6;
 }
 
 .mobile-nav-item {
-  @apply block text-heavyGray hover:text-white hover:font-bold my-1;
+  @apply block text-darkGray text-2xl hover:text-white hover:font-bold my-1;
 }

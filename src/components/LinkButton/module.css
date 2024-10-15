@@ -1,0 +1,7 @@
+.link-button {
+  @apply h-16 flex items-center justify-center px-8 py-4 text-primary font-bold text-2xl;
+
+  &:hover {
+    @apply text-active underline;
+  }
+}
