@@ -55,6 +55,6 @@
   }
 
   div {
-    @apply text-primary;
+    @apply text-primary text-general;
   }
 }

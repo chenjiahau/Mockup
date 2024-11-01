@@ -7,7 +7,7 @@
 }
 
 .dropdown-button {
-  @apply w-full h-10 text-primary bg-white rounded-lg border border-primary;
+  @apply w-full h-10 bg-white rounded-lg border border-primary text-primary text-general;
   display: grid;
   grid-template-columns: 1fr 18px 1rem;
   cursor: pointer;
@@ -38,7 +38,7 @@
   }
 
   .option {
-    @apply w-full h-10 text-primary flex items-center px-4;
+    @apply w-full h-10 flex items-center text-primary text-general px-4;
     cursor: pointer;
 
     &:hover {

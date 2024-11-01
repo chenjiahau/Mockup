@@ -1,5 +1,5 @@
-.link-button {
-  @apply flex items-center justify-center text-primary font-bold text-xl;
+a.link-button {
+  @apply flex items-center justify-center text-primary text-button font-bold;
 
   &:hover {
     @apply text-active underline;

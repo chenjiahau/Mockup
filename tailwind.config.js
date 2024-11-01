@@ -28,6 +28,11 @@ export default {
         reverseModal: '#5bbcff',
         hoverModal: '#0AF8F4',
       },
+      fontSize: {
+        'general': '0s.85rem',
+        'title': '1.3rem',
+        'button': '1.1rem',
+      },
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],
       },
