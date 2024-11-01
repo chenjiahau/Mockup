@@ -2,6 +2,10 @@
   @apply h-screen flex flex-col justify-center items-center bg-white p-8 text-[100%];
 }
 
+.login-border {
+  @apply border border-primary rounded-md p-8;
+}
+
 .login-block {
   @apply w-[32rem] flex flex-col gap-2 bg-primary border rounded-md border-primary text-white mb-4 p-4;
 
@@ -21,7 +25,7 @@
   }
 
   .button-box {
-    @apply w-full h-auto;
+    @apply w-full;
     font-size: inherit;
   }
 }
@@ -57,5 +61,5 @@
 }
 
 .login-block.login-footer {
-  @apply flex flex-row justify-center items-center mt-4;
+  @apply flex flex-row justify-center items-center mt-4 mb-0;
 }
