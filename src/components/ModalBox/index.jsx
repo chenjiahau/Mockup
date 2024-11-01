@@ -37,7 +37,7 @@ const ModalBox = ({ customWidthClass, title, onClose, onSubmit, children }) => {
         <div className='modal-footer'>
           <ButtonBox
             onClick={onSubmit}
-            isModal={true}
+            isSave={true}
             isDisabled={true}
             extraClasses={["primary-shadow"]}
           >

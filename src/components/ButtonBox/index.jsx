@@ -6,15 +6,15 @@ const ButtonBox = ({
   extraClasses,
   isDisabled,
   isClose,
-  isModal,
+  isSave,
   title,
   onClick,
   children,
 }) => {
   let extraClassName = generateExtraClass(extraClasses);
   let disabledClassName = isDisabled ? "disabled-button" : "";
+  let saveClassName = isSave ? "save-button" : "";
   let closeClassName = isClose ? "close-button" : "";
-  let modalClassName = isModal ? "modal-button" : "";
 
   const handleClick = () => {
     if (isDisabled) return;
@@ -23,7 +23,7 @@ const ButtonBox = ({
 
   return (
     <div
-      className={`button-box dark-primary-shadow ${extraClassName} ${disabledClassName} ${closeClassName} ${modalClassName}`}
+      className={`button-box dark-primary-shadow ${extraClassName} ${disabledClassName} ${closeClassName} ${saveClassName}`}
       onClick={handleClick}
     >
       <button className={`${disabledClassName}`}>{children || title}</button>
@@ -34,8 +34,8 @@ const ButtonBox = ({
 ButtonBox.propTypes = {
   extraClasses: PropTypes.array,
   isDisabled: PropTypes.bool,
+  isSave: PropTypes.bool,
   isClose: PropTypes.bool,
-  isModal: PropTypes.bool,
   title: PropTypes.string,
   onClick: PropTypes.func,
   children: PropTypes.node,

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./ui/Layout";
 
+import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Members from "./pages/Members";
 import Categories from "./pages/Categories";
@@ -14,6 +15,7 @@ import Example from "./pages/Example";
 function App() {
   return (
     <Routes>
+      <Route path='/login' element={<Login />} />
       <Route path='/' element={<Layout />}>
         <Route path='/' element={<Dashboard />} />
         <Route path='/members' element={<Members />} />
