@@ -55,6 +55,6 @@
   }
 
   div {
-    @apply text-primary text-2xl;
+    @apply text-primary;
   }
 }

@@ -3,7 +3,7 @@
 }
 
 .pagination-item {
-  @apply h-12 flex justify-center items-center gap-2 text-primary border border-primary rounded-md cursor-pointer p-4;
+  @apply h-10 flex justify-center items-center gap-2 text-primary border border-primary rounded-md cursor-pointer p-4;
 
   &:hover {
     @apply bg-hover border-hover text-white;
@@ -11,7 +11,7 @@
 }
 
 .arrow {
-  @apply w-32 h-12 bg-white text-primary rounded-md flex justify-center items-center cursor-pointer;
+  @apply w-32 h-10 bg-white text-primary rounded-md flex justify-center items-center cursor-pointer;
 
   &:hover {
     @apply bg-hover text-white;
@@ -19,9 +19,9 @@
 }
 
 .active {
-  @apply h-12 bg-primary text-white;
+  @apply h-10 bg-primary text-white;
 }
 
 .dots {
-  @apply h-12 flex justify-center items-center border-none;
+  @apply h-10 flex justify-center items-center border-none;
 }

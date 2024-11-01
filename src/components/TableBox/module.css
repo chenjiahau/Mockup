@@ -23,7 +23,7 @@
     }
 
     .sortable-box {
-      @apply h-12 flex justify-between items-center border bg-primary rounded-md border-transparent text-white text-xl;
+      @apply h-10 flex justify-between items-center border bg-primary rounded-md border-transparent text-white;
 
       &:hover {
         @apply bg-hover border-hover;
@@ -31,7 +31,7 @@
     }
 
     .unsortable-box {
-      @apply h-12 flex justify-center items-center bg-primary rounded-md border-transparent text-white text-xl;
+      @apply h-10 flex justify-center items-center bg-primary rounded-md border-transparent text-white;
     }
 
     .sortable {
@@ -62,7 +62,7 @@
     }
 
     .td-box {
-      @apply h-20 flex justify-start items-center border-b border-gray px-4 py-4 text-lg;
+      @apply h-20 flex justify-start items-center border-b border-gray px-4 py-4;
     }
 
     .td-max {
@@ -78,7 +78,7 @@
 }
 
 .vertical-table {
-  @apply w-full flex flex-col bg-white text-lg;
+  @apply w-full flex flex-col bg-white;
 
   @media screen and (min-width: 1024px) {
     display: none;
@@ -102,7 +102,7 @@
 
   .th-box,
   .th-sort-box {
-    @apply w-64 h-12 flex justify-center items-center bg-primary rounded-md text-white text-xl font-bold;
+    @apply w-64 h-10 flex justify-center items-center bg-primary rounded-md text-white font-bold;
   }
 
   .th-sort-box {
