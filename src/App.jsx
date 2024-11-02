@@ -4,6 +4,8 @@ import { Routes, Route } from "react-router-dom";
 import Layout from "./ui/Layout";
 
 import Login from "./pages/Login";
+import Register from "./pages/Register";
+import ForgotPassword from "./pages/ForgotPassword";
 import Dashboard from "./pages/Dashboard";
 import Members from "./pages/Members";
 import Categories from "./pages/Categories";
@@ -16,6 +18,8 @@ function App() {
   return (
     <Routes>
       <Route path='/login' element={<Login />} />
+      <Route path='/register' element={<Register />} />
+      <Route path='/forgot-password' element={<ForgotPassword />} />
       <Route path='/' element={<Layout />}>
         <Route path='/' element={<Dashboard />} />
         <Route path='/members' element={<Members />} />

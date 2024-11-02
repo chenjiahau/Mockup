@@ -1,4 +1,4 @@
-import "./module.css";
+import "@/pages/Login/module.css";
 import logo from "@/assets/img/brand.png";
 import { useState } from "react";
 
@@ -12,10 +12,14 @@ import InputBox from "@/components/InputBox";
 import ButtonBox from "@/components/ButtonBox";
 import LinkButton from "@/components/LinkButton";
 
-const Login = () => {
+const Register = () => {
   const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [isConfirmPasswordVisible, setIsConfirmPasswordVisible] =
+    useState(false);
 
   return (
     <div className='login-container'>
@@ -43,6 +47,18 @@ const Login = () => {
           </FormGroup>
 
           <FormGroup>
+            <FormLabel forName='username'>Username</FormLabel>
+            <InputBox
+              type='text'
+              id='username'
+              name='username'
+              placeholder='Username'
+              value={username}
+              onChange={(value) => setUsername(value)}
+            />
+          </FormGroup>
+
+          <FormGroup>
             <FormLabel forName='password'>Password</FormLabel>
             <InputBox
               type={isPasswordVisible ? "text" : "password"}
@@ -60,11 +76,32 @@ const Login = () => {
               }
             </InputBox>
           </FormGroup>
+
+          <FormGroup>
+            <FormLabel forName='password'>Confirm Password</FormLabel>
+            <InputBox
+              type={isConfirmPasswordVisible ? "text" : "password"}
+              id='confirmPassword'
+              name='confirm-password'
+              placeholder='Confirm Password'
+              value={confirmPassword}
+              onChange={(value) => setConfirmPassword(value)}
+            >
+              {
+                <FontAwesomeIcon
+                  icon={isConfirmPasswordVisible ? faEyeSlash : faEye}
+                  onClick={() =>
+                    setIsConfirmPasswordVisible(!isPasswordVisible)
+                  }
+                />
+              }
+            </InputBox>
+          </FormGroup>
         </div>
 
         <div className='login-block login-button'>
           <ButtonBox onClick={() => {}} isSave={true}>
-            Sign In
+            Sign Up
           </ButtonBox>
           <ButtonBox
             onClick={() => {}}
@@ -76,13 +113,8 @@ const Login = () => {
         </div>
 
         <div className='login-block login-link'>
-          <div>Did you forget your password?</div>
-          <LinkButton to='/forgot-password' title='Forget Password' />
-        </div>
-
-        <div className='login-block login-link'>
-          <div>Do you have not an account?</div>
-          <LinkButton to='/register' title='Sign Up' />
+          <div>Do you have an account?</div>
+          <LinkButton to='/login' title='Back' />
         </div>
 
         <div className='login-block login-footer light-primary-shadow'>
@@ -93,4 +125,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;

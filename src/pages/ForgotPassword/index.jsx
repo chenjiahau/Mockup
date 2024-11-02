@@ -1,9 +1,6 @@
-import "./module.css";
+import "@/pages/Login/module.css";
 import logo from "@/assets/img/brand.png";
 import { useState } from "react";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
 import MainTitle from "@/components/MainTitle";
 import FormGroup from "@/components/FormGroup";
@@ -12,10 +9,8 @@ import InputBox from "@/components/InputBox";
 import ButtonBox from "@/components/ButtonBox";
 import LinkButton from "@/components/LinkButton";
 
-const Login = () => {
+const ForgotPassword = () => {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
   return (
     <div className='login-container'>
@@ -41,30 +36,11 @@ const Login = () => {
               onChange={(value) => setEmail(value)}
             />
           </FormGroup>
-
-          <FormGroup>
-            <FormLabel forName='password'>Password</FormLabel>
-            <InputBox
-              type={isPasswordVisible ? "text" : "password"}
-              id='password'
-              name='password'
-              placeholder='Password'
-              value={password}
-              onChange={(value) => setPassword(value)}
-            >
-              {
-                <FontAwesomeIcon
-                  icon={isPasswordVisible ? faEyeSlash : faEye}
-                  onClick={() => setIsPasswordVisible(!isPasswordVisible)}
-                />
-              }
-            </InputBox>
-          </FormGroup>
         </div>
 
         <div className='login-block login-button'>
           <ButtonBox onClick={() => {}} isSave={true}>
-            Sign In
+            Reset Password
           </ButtonBox>
           <ButtonBox
             onClick={() => {}}
@@ -76,13 +52,8 @@ const Login = () => {
         </div>
 
         <div className='login-block login-link'>
-          <div>Did you forget your password?</div>
-          <LinkButton to='/forgot-password' title='Forget Password' />
-        </div>
-
-        <div className='login-block login-link'>
-          <div>Do you have not an account?</div>
-          <LinkButton to='/register' title='Sign Up' />
+          <div>Do you have an account?</div>
+          <LinkButton to='/login' title='Back' />
         </div>
 
         <div className='login-block login-footer light-primary-shadow'>
@@ -93,4 +64,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default ForgotPassword;
