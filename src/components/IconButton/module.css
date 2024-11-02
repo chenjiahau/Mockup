@@ -1,5 +1,5 @@
 .icon-button {
-  @apply w-6 h-6 flex items-center justify-center;
+  @apply w-6 h-6 flex items-center justify-center gap-1;
 
   svg {
     @apply w-6 h-6 text-primary;
@@ -7,6 +7,22 @@
     &:hover {
       @apply text-active;
     }
+  }
+}
+
+.icon-button__rounded {
+  @apply w-auto h-12 rounded-lg bg-darkPrimary px-6 py-4 shadow-lightPrimary;
+
+  &:hover {
+    @apply bg-hover shadow-lightPrimary;
+  }
+
+  svg {
+    @apply w-4 h-4 !text-white;
+  }
+
+  div {
+    @apply text-button text-white;
   }
 }
 

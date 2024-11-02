@@ -67,7 +67,7 @@ const Dashboard = () => {
   const linkList = [{ to: "/", label: "Dashboard" }];
 
   const mostPublisherPieChart = {
-    labels: ["Ivan", "James", "愛大", "France", "Sammy", "Nancy"],
+    labels: ["RD1", "RD2", "RD3", "RD4", "RD5", "RD6"],
     datasets: [
       {
         data: [5, 2, 1, 1, 1, 1],
@@ -103,16 +103,16 @@ const Dashboard = () => {
 
   const mostCommentBarChart = {
     labels: [
-      "D-Link",
-      "D-Link",
-      "D-Link",
-      "D-Link",
-      "D-Link",
-      "D-Link",
-      "D-Link",
-      "D-Link",
-      "D-Link",
-      "D-Link",
+      "Company",
+      "Company",
+      "Company",
+      "Company",
+      "Company",
+      "Company",
+      "Company",
+      "Company",
+      "Company",
+      "Company",
     ],
     datasets: [
       {

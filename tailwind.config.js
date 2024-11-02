@@ -28,9 +28,16 @@ export default {
         reverseModal: '#5bbcff',
         hoverModal: '#0AF8F4',
       },
+      boxShadow: {
+        darkPrimary: '4px 4px 2px rgba(5, 70, 155, 0.4)',
+        lightPrimary: '4px 4px 2px rgba(203, 224, 255, 0.4)',
+        save: '4px 4px 2px rgba(91, 188, 255, 0.4)',
+        cancel: '4px 4px 2px rgba(220, 53, 69, 0.4)',
+      },
       fontSize: {
-        'general': '0s.85rem',
-        'title': '1.3rem',
+        'small': '0.9rem',
+        'general': '1rem',
+        'title': '1.5rem',
         'button': '1.1rem',
       },
       fontFamily: {

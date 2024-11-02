@@ -7,7 +7,7 @@
 }
 
 .login-block {
-  @apply w-[32rem] flex flex-col gap-2 bg-primary border rounded-md border-primary text-white mb-4 p-4;
+  @apply flex flex-col gap-2 bg-primary border rounded-md border-primary text-white mb-4 p-4;
 
   .form-group {
     @apply mb-2;
@@ -47,7 +47,7 @@
 }
 
 .login-block.login-button {
-  @apply w-[32rem] !flex-row bg-transparent border-transparent gap-4;
+  @apply !flex-row bg-transparent border-transparent gap-4;
 }
 
 .login-block.login-link {

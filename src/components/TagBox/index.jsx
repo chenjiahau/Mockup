@@ -2,8 +2,12 @@ import "./module.css";
 
 import PropTypes from "prop-types";
 import { isFunction } from "lodash";
+import { generateExtraClass } from "../util";
 
-const TagBox = ({ tag, onClick }) => {
+const TagBox = ({ extraClasses, tag, onClick }) => {
+  tag.hashCode = tag.hashCode ? tag.hashCode : "#000000";
+  let extraClassName = generateExtraClass(extraClasses);
+
   const clickable = isFunction(onClick) ? "clickable" : "unclickable";
   const onClickTag = (tag) => {
     if (isFunction(onClick)) {
@@ -13,17 +17,17 @@ const TagBox = ({ tag, onClick }) => {
 
   return (
     <div
-      className={`tag-box ${clickable}`}
+      className={`tag-box ${clickable} ${extraClassName}`}
       style={{ backgroundColor: tag.hashCode }}
+      onClick={onClickTag}
     >
-      <div key={tag} onClick={onClickTag}>
-        {tag.label}
-      </div>
+      <div key={tag}>{tag.label}</div>
     </div>
   );
 };
 
 TagBox.propTypes = {
+  extraClasses: PropTypes.array,
   tag: PropTypes.object,
   onClick: PropTypes.func,
 };

@@ -9,8 +9,16 @@ import { isFunction } from "lodash";
 import IconButton from "@/components/IconButton";
 import ButtonBox from "@/components/ButtonBox";
 
-const ModalBox = ({ customWidthClass, title, onClose, onSubmit, children }) => {
+const ModalBox = ({
+  customWidthClass,
+  deleteMode,
+  title,
+  onClose,
+  onSubmit,
+  children,
+}) => {
   customWidthClass = customWidthClass || "";
+  deleteMode = deleteMode || false;
   title = title || "Modal Title";
   onClose = isFunction(onClose) ? onClose : () => {};
   onSubmit = isFunction(onSubmit) ? onSubmit : () => {};
@@ -38,14 +46,12 @@ const ModalBox = ({ customWidthClass, title, onClose, onSubmit, children }) => {
           <ButtonBox
             onClick={onSubmit}
             isSave={true}
-            isDisabled={true}
             extraClasses={["primary-shadow"]}
           >
-            Save
+            {deleteMode ? "Delete" : "Save"}
           </ButtonBox>
           <ButtonBox
             onClick={onClose}
-            isModal={true}
             isClose={true}
             extraClasses={["cancel-shadow"]}
           >
@@ -59,6 +65,7 @@ const ModalBox = ({ customWidthClass, title, onClose, onSubmit, children }) => {
 
 ModalBox.propTypes = {
   customWidthClass: PropTypes.string,
+  deleteMode: PropTypes.bool,
   title: PropTypes.string,
   onClose: PropTypes.func,
   onSubmit: PropTypes.func,

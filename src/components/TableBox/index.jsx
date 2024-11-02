@@ -2,31 +2,29 @@ import "./module.css";
 
 import { useRef } from "react";
 import PropTypes from "prop-types";
-import { cloneDeep, isFunction, orderBy, update } from "lodash";
+import { cloneDeep, isFunction } from "lodash";
 
-const TableBox = ({ headers, onChangeHeader, data, onChangeData }) => {
+const TableBox = ({ headers, onChangeHeader, data }) => {
   const tableRef = useRef(null);
 
   const onClickSort = (header) => {
     if (isFunction(onChangeHeader)) {
+      let column = null;
+      let order = null;
+
       const updatedHeaders = cloneDeep(headers).map((h) => {
         if (h.key === header.key) {
           h.sort = h.sort === "asc" ? "desc" : "asc";
+          column = h.key;
+          order = h.sort;
         } else {
           h.sort = null;
         }
+
         return h;
       });
 
-      onChangeHeader(updatedHeaders);
-    }
-
-    if (isFunction(onChangeData)) {
-      let updatedData = orderBy(data, [header.key], [header.sort]);
-      updatedData = updatedData.map((row, index) => {
-        return update(row, "index", () => index + 1);
-      });
-      onChangeData(updatedData);
+      onChangeHeader(updatedHeaders, column, order);
     }
   };
 
@@ -231,7 +229,6 @@ TableBox.propTypes = {
   ).isRequired,
   onChangeHeader: PropTypes.func,
   data: PropTypes.array,
-  onChangeData: PropTypes.func,
 };
 
 export default TableBox;

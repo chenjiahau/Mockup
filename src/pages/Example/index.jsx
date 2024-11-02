@@ -7,6 +7,8 @@ import {
   faFloppyDisk,
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
+import { orderBy } from "lodash";
+
 import Breadcrumbs from "@/components/Breadcrumbs";
 import MainTitle from "@/components/MainTitle";
 import Form from "@/components/Form";
@@ -109,7 +111,8 @@ const Example = () => {
       key: "tag",
       label: "Tag",
       isSortable: false,
-      width: "100",
+      isCenter: true,
+      width: "200",
       sort: "",
     },
     {
@@ -207,12 +210,10 @@ const Example = () => {
     );
   };
 
-  const handleChangeHeader = (newHeader) => {
+  const handleChangeHeader = (newHeader, column, order) => {
     setTableHeader(newHeader);
-  };
-
-  const handlerChangeData = (newData) => {
-    setData(newData);
+    const sortedData = orderBy(data, column, order);
+    setData(sortedData);
   };
 
   useEffect(() => {
@@ -381,7 +382,6 @@ const Example = () => {
             headers={tableHeaders}
             onChangeHeader={handleChangeHeader}
             data={data}
-            onChangeData={handlerChangeData}
           />
           <Spacer />
           <PaginationBox

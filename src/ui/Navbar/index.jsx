@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className='bg-darkPrimary custom-container !py-4'>
+      <nav className='bg-darkPrimary custom-container !py-[0.4rem]'>
         <div className='flex items-center justify-between'>
           <div className='flex items-center gap-2'>
             <div className='text-white text-2xl font-bold bg-primary rounded-[50%] p-2'>
@@ -26,7 +26,10 @@ const Navbar = () => {
                 <img src={logo} className='w-4' />
               </a>
             </div>
-            <h1 className='text-white'>Management Information System</h1>
+            <h1 className='text-white lg:block md:block hidden'>
+              Management Information System
+            </h1>
+            <h1 className='text-white lg:hidden md:hidden'>MIS</h1>
           </div>
           <div className='block md:hidden px-1'>
             <button id='menu-button' className='text-white focus:outline-none'>

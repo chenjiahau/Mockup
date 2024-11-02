@@ -46,7 +46,7 @@ const PaginationBox = (props) => {
         onClick={onPrevious}
       >
         <FontAwesomeIcon icon={faLeftLong} />
-        <span>Previous</span>
+        <span>Prev</span>
       </div>
       {paginationRange.map((pageNumber, index) => {
         if (pageNumber === DOTS) {
@@ -57,13 +57,13 @@ const PaginationBox = (props) => {
           );
         }
 
+        const isCurrent = currentPage === pageNumber;
+
         return (
           <div
-            className={`pagination-item ${
-              currentPage === pageNumber ? "active" : ""
-            }`}
+            className={`pagination-item ${isCurrent ? "active" : ""}`}
             key={index}
-            onClick={() => onPageChange(pageNumber)}
+            onClick={() => !isCurrent && onPageChange(pageNumber)}
           >
             {pageNumber}
           </div>

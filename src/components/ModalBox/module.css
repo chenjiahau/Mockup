@@ -3,7 +3,7 @@
 }
 
 .modal-body {
-  @apply relative w-[80%] min-h-[30%] max-h-[90%] lg:w-[600px] md:w-[600px] px-8 py-6 bg-modal rounded-lg shadow-lg;
+  @apply relative w-[80%] min-h-[auto] max-h-[90%] lg:w-[600px] md:w-[600px] px-8 py-6 bg-modal rounded-lg shadow-lg;
   display: grid;
   grid-template-rows: auto 1fr auto;
   transform: translateY(-40px);
@@ -20,6 +20,18 @@
 .modal-content {
   @apply flex flex-col;
 
+  .modal-text {
+    @apply text-black text-general font-normal;
+  }
+
+  .warning-text {
+    @apply text-yellow-500 text-general font-semibold;
+  }
+
+  .danger-text {
+    @apply text-red-500 text-general font-semibold;
+  }
+
   .input-box,
   .input-box-with-icon,
   .dropdown-box,
@@ -33,5 +45,10 @@
 }
 
 .modal-footer {
-  @apply flex items-center justify-end gap-4 border-t border-reverseModal pt-8 pb-4;
+  @apply flex items-center justify-end gap-4 border-t border-reverseModal mt-3 pt-8 pb-4;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: end;
+  }
 }
