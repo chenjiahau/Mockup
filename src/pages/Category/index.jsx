@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import {
   faPlus,
-  faPenToSquare,
   faTrash,
   faFloppyDisk,
   faXmark,
@@ -22,30 +21,40 @@ import TableBox from "@/components/TableBox";
 import PaginationBox, { numberOfRow } from "@/components/PaginationBox";
 import Spacer from "@/components/Spacer";
 
-import CategoryModal from "./CategoryModal";
+import SubcategoryModal from "./SubcategoryModal";
 import DeleteModal from "./DeleteModal";
 
-const Categories = () => {
-  const navigate = useNavigate();
-  const linkList = [
-    { to: "/", label: "Home" },
-    { to: "/categories", label: "Categories" },
-  ];
+const categories = [
+  {
+    id: 1,
+    name: "Company",
+    subcategories: 5,
+    status: true,
+  },
+  {
+    id: 2,
+    name: "Person",
+    subcategories: 10,
+    status: true,
+  },
+];
 
+const Category = () => {
+  const { id: categoryId } = useParams();
+
+  const [linkList, setLinkList] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [pageSize, setPageSize] = useState(numberOfRow[1]);
   const [totalDataCount, setTotalDataCount] = useState(200);
   const [dataAry, setDataAry] = useState([
     {
       id: 1,
-      name: "Company",
-      subcategories: 5,
+      name: "E-mail",
       status: true,
     },
     {
       id: 2,
-      name: "Person",
-      subcategories: 10,
+      name: "Conversation",
       status: true,
     },
   ]);
@@ -60,16 +69,8 @@ const Categories = () => {
     },
     {
       key: "name",
-      label: "Category",
+      label: "Subcategory",
       isSortable: true,
-      sort: "",
-    },
-    {
-      key: "subcategories",
-      label: "Subcategories",
-      isSortable: true,
-      isCenter: true,
-      width: "50",
       sort: "",
     },
     {
@@ -89,9 +90,9 @@ const Categories = () => {
     },
   ]);
   const [tableData, setTableData] = useState([]);
-  const [openCategoryModal, setOpenCategoryModal] = useState(false);
+  const [openSubcategoryModal, setOpenSubcategoryModal] = useState(false);
   const [openDeleteModal, setOpenDeleteModal] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedSubcategory, setSelectedSubcategory] = useState(null);
 
   const handleChangeHeader = (newHeader, column, order) => {
     setTableHeader(newHeader);
@@ -176,16 +177,23 @@ const Categories = () => {
     setDataAry(updatedData);
   };
 
-  const handleEditCategory = (category) => {
-    navigate(`/categories/${category.id}`);
-  };
-
-  const handleOpenDeleteModal = (category) => {
+  const handleOpenDeleteModal = (subcategory) => {
     setOpenDeleteModal(true);
-    setSelectedCategory(category);
+    setSelectedSubcategory(subcategory);
   };
 
   useEffect(() => {
+    const category = categories.find((category) => category.id === +categoryId);
+    const updatedLinkList = [
+      { to: "/", label: "Home" },
+      { to: "/categories", label: "Categories" },
+      {
+        to: `/categories/${categoryId}`,
+        label: category.name,
+      },
+    ];
+    setLinkList(updatedLinkList);
+
     const updatedTableData = dataAry.map((data, index) => {
       return {
         ...data,
@@ -216,7 +224,6 @@ const Categories = () => {
             }}
           />
         ),
-        subcategories: data.subcategories,
         status: (
           <ElementGroup>
             <RadioBox
@@ -235,9 +242,6 @@ const Categories = () => {
         ),
         action: (
           <div className='flex items-center gap-4'>
-            <IconButton onClick={() => handleEditCategory(data)}>
-              <FontAwesomeIcon icon={faPenToSquare} />
-            </IconButton>
             <IconButton onClick={() => handleOpenDeleteModal(data)}>
               <FontAwesomeIcon icon={faTrash} />
             </IconButton>
@@ -257,7 +261,7 @@ const Categories = () => {
           <ToolbarBox>
             <IconButton
               rounded={true}
-              onClick={() => setOpenCategoryModal(true)}
+              onClick={() => setOpenSubcategoryModal(true)}
             >
               <FontAwesomeIcon icon={faPlus} />
               <div>Add</div>
@@ -283,17 +287,16 @@ const Categories = () => {
         </Form>
       </div>
 
-      <CategoryModal
-        openModal={openCategoryModal}
-        selectedCategory={selectedCategory}
-        onClose={() => setOpenCategoryModal(false)}
-        onSubmit={() => setOpenCategoryModal(false)}
+      <SubcategoryModal
+        openModal={openSubcategoryModal}
+        onClose={() => setOpenSubcategoryModal(false)}
+        onSubmit={() => setOpenSubcategoryModal(false)}
       />
 
       <DeleteModal
         deleteMode={true}
         openModal={openDeleteModal}
-        selectedCategory={selectedCategory}
+        selectedSubcategory={selectedSubcategory}
         onClose={() => setOpenDeleteModal(false)}
         onSubmit={() => setOpenDeleteModal(false)}
       />
@@ -301,4 +304,4 @@ const Categories = () => {
   );
 };
 
-export default Categories;
+export default Category;

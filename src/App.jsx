@@ -9,6 +9,7 @@ import ForgotPassword from "./pages/ForgotPassword";
 import Dashboard from "./pages/Dashboard";
 import Members from "./pages/Members";
 import Categories from "./pages/Categories";
+import Category from "./pages/Category";
 import Tags from "./pages/Tags";
 import Documents from "./pages/Documents";
 import Settings from "./pages/Settings";
@@ -24,6 +25,7 @@ function App() {
         <Route path='/' element={<Dashboard />} />
         <Route path='/members' element={<Members />} />
         <Route path='/categories' element={<Categories />} />
+        <Route path='/categories/:id' element={<Category />} />
         <Route path='/tags' element={<Tags />} />
         <Route path='/documents' element={<Documents />} />
         <Route path='/settings' element={<Settings />} />
