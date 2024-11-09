@@ -39,12 +39,12 @@ const DropdownBox = ({ options, onClick, isColor, zIndex }) => {
             <>
               <div
                 className='color'
-                style={{ backgroundColor: activeOption.hashCode }}
+                style={{ backgroundColor: activeOption?.hashCode }}
               />
-              <div>{activeOption.label}</div>
+              <div>{activeOption?.label}</div>
             </>
           ) : (
-            <>{activeOption.label}</>
+            <>{activeOption?.label}</>
           )}
         </div>
         <div className='icon' onClick={handleButtonClick}>
@@ -93,7 +93,7 @@ const DropdownBox = ({ options, onClick, isColor, zIndex }) => {
                 >
                   <div
                     className='color'
-                    style={{ backgroundColor: option.hashCode }}
+                    style={{ backgroundColor: option?.hashCode }}
                   />
                   <div>{option.label}</div>
                 </div>
