@@ -39,6 +39,7 @@ export default {
         'general': '1rem',
         'title': '1.5rem',
         'button': '1.1rem',
+        'large': '2rem',
       },
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],

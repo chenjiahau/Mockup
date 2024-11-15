@@ -1,7 +1,3 @@
-input {
-  @apply w-full h-full bg-white outline-none;
-}
-
 .input-box {
   @apply w-[100%]  h-10 bg-white px-4 rounded-md border border-primary text-general hover:border-hover;
 }
@@ -21,4 +17,9 @@ input {
       @apply text-hover;
     }
   }
+}
+
+.input-box input,
+.input-box-with-icon input {
+  @apply w-full h-full bg-white outline-none;
 }

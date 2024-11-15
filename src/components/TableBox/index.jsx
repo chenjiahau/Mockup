@@ -31,7 +31,7 @@ const TableBox = ({ headers, onChangeHeader, data }) => {
   return (
     <>
       <div className='table-box'>
-        <table ref={tableRef} className=''>
+        <table ref={tableRef}>
           <thead>
             <tr>
               {headers.map((header) => {

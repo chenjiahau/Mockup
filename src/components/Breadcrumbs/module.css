@@ -1,7 +1,7 @@
 ul.breadcrumb {
   padding: 10px 2rem;
   list-style: none;
-  @apply bg-lightPrimary text-white;
+  @apply bg-lightPrimary text-primary;
 
   @media (max-width: 768px) {
     padding: 10px 1rem;

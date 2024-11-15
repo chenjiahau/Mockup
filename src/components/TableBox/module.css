@@ -93,7 +93,7 @@
   }
 
   .row-box {
-    @apply bg-white shadow-md rounded-md border border-primary mb-4 p-4;
+    @apply bg-white shadow-md rounded-md border border-primary mb-4 p-2;
 
     &:hover {
       @apply border-hover;

@@ -13,5 +13,9 @@
 }
 
 .unclickable {
-  @apply cursor-not-allowed;
+  @apply cursor-default;
+}
+
+.delete-btn {
+  @apply ml-2;
 }

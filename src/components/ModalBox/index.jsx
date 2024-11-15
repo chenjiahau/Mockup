@@ -27,8 +27,12 @@ const ModalBox = ({
     const nav = document.querySelector("nav");
     nav.style.zIndex = "0";
 
+    const mainContent = document.querySelector(".main-content");
+    mainContent.style.overflow = "hidden";
+
     return () => {
       nav.style.display = "block";
+      mainContent.style.overflow = "auto";
     };
   }, []);
 

@@ -110,6 +110,11 @@ const DropdownBox = ({ options, onClick, isColor, zIndex }) => {
               </div>
             );
           })}
+          {options.length === 0 && (
+            <div className='option no-data'>
+              <div>No Item</div>
+            </div>
+          )}
         </div>
       )}
     </div>

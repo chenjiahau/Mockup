@@ -49,4 +49,9 @@
   .active {
     @apply bg-active text-white;
   }
+
+  .no-data:hover {
+    @apply bg-white text-primary;
+    cursor: default;
+  }
 }

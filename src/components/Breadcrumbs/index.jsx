@@ -10,7 +10,11 @@ const Breadcrumbs = (prop) => {
       {linkList.map((link, index) => {
         return (
           <li key={index}>
-            <Link to={link.to}>{link.label}</Link>
+            {link.to ? (
+              <Link to={link.to}>{link.label}</Link>
+            ) : (
+              <span>{link.label}</span>
+            )}
           </li>
         );
       })}

@@ -12,6 +12,7 @@ import Categories from "./pages/Categories";
 import Category from "./pages/Category";
 import Tags from "./pages/Tags";
 import Documents from "./pages/Documents";
+import Document from "./pages/Document";
 import Settings from "./pages/Settings";
 import Example from "./pages/Example";
 
@@ -28,6 +29,7 @@ function App() {
         <Route path='/categories/:id' element={<Category />} />
         <Route path='/tags' element={<Tags />} />
         <Route path='/documents' element={<Documents />} />
+        <Route path='/documents/:id' element={<Document />} />
         <Route path='/settings' element={<Settings />} />
         <Route path='/example' element={<Example />} />
       </Route>

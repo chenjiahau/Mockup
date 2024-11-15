@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className='bg-darkPrimary custom-container !py-[0.4rem]'>
+      <nav className='bg-darkPrimary custom-container !py-[0.6rem]'>
         <div className='flex items-center justify-between'>
           <div className='flex items-center gap-2'>
             <div className='text-white text-2xl font-bold bg-primary rounded-[50%] p-2'>
