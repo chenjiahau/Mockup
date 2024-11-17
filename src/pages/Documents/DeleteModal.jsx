@@ -16,14 +16,13 @@ const DeleteModal = ({
 
   return (
     <ModalBox
+      enableMessageModal={true}
       deleteMode={deleteMode}
       title='Delete Document'
       onClose={() => onClose()}
       onSubmit={() => onSubmit()}
     >
-      <p className='danger-text'>
-        Do you want to delete this document({selectedDocument.document})?
-      </p>
+      <p>Do you want to delete this document({selectedDocument.title})?</p>
     </ModalBox>
   );
 };

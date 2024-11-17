@@ -10,6 +10,8 @@ import IconButton from "@/components/IconButton";
 import ButtonBox from "@/components/ButtonBox";
 
 const ModalBox = ({
+  enableMessageModal,
+  enableScroll,
   customWidthClass,
   deleteMode,
   title,
@@ -17,6 +19,7 @@ const ModalBox = ({
   onSubmit,
   children,
 }) => {
+  enableMessageModal = enableMessageModal || false;
   customWidthClass = customWidthClass || "";
   deleteMode = deleteMode || false;
   title = title || "Modal Title";
@@ -38,7 +41,11 @@ const ModalBox = ({
 
   return (
     <div className='modal-box'>
-      <div className={`modal-body ${customWidthClass}`}>
+      <div
+        className={`modal-body ${
+          enableScroll ? "!overflow-y-auto" : "!overflow-visible"
+        } ${customWidthClass}`}
+      >
         <div className='modal-header'>
           <h1 className='title'>{title}</h1>
           <IconButton onClick={onClose}>
@@ -46,7 +53,11 @@ const ModalBox = ({
           </IconButton>
         </div>
         <div className='modal-content'>{children}</div>
-        <div className='modal-footer'>
+        <div
+          className={`${
+            enableMessageModal ? "modal-message-footer " : "modal-footer "
+          }`}
+        >
           <ButtonBox
             onClick={onSubmit}
             isSave={true}
@@ -68,6 +79,8 @@ const ModalBox = ({
 };
 
 ModalBox.propTypes = {
+  enableMessageModal: PropTypes.bool,
+  enableScroll: PropTypes.bool,
   customWidthClass: PropTypes.string,
   deleteMode: PropTypes.bool,
   title: PropTypes.string,

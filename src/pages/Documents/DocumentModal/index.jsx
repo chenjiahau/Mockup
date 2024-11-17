@@ -4,7 +4,6 @@ import React, { Fragment, useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 import ModalBox from "@/components/ModalBox";
-import Hr from "@/components/Hr";
 import FormGroup from "@/components/FormGroup";
 import FormLabel from "@/components/FormLabel";
 import DropdownBox from "@/components/DropdownBox";
@@ -13,7 +12,6 @@ import TagBox from "@/components/TagBox";
 import EditorJS from "@/components/Editor";
 
 import { getDefaultEditorData } from "@/util/editor.util";
-import { has } from "lodash";
 
 const DocumentModal = ({
   openModal,
@@ -320,6 +318,7 @@ const DocumentModal = ({
 
   return (
     <ModalBox
+      enableScroll={true}
       title={selectedDocument ? "Edit Document" : "Add Document"}
       customWidthClass='document-modal-body'
       onClose={() => onClose()}

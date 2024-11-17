@@ -90,6 +90,7 @@ const CommentModal = ({
 
   return (
     <ModalBox
+      enableScroll={true}
       title={selectedComment ? "Edit Comment" : "Add Comment"}
       customWidthClass='document-modal-body'
       onClose={() => onClose()}

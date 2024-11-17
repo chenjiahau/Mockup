@@ -27,7 +27,8 @@
 }
 
 .dropdown-content {
-  @apply absolute w-full bg-white rounded-lg border border-active;
+  @apply absolute w-full bg-white rounded-lg border border-active overflow-y-auto;
+  max-height: 300px;
   top: 100%;
   left: 0;
   transform: translateY(10px);

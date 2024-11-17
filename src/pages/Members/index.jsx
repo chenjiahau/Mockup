@@ -21,6 +21,7 @@ import PaginationBox, { numberOfRow } from "@/components/PaginationBox";
 import TagBox from "@/components/TagBox";
 import Spacer from "@/components/Spacer";
 
+import MemberModal from "./MemberModal";
 import RoleModal from "./RoleModal";
 import DeleteModal from "./DeleteModal";
 
@@ -98,6 +99,7 @@ const Members = () => {
     },
   ]);
   const [tableData, setTableData] = useState([]);
+  const [openMemberModal, setOpenMemberModal] = useState(false);
   const [openRoleModal, setOpenRoleModal] = useState(false);
   const [openDeleteModal, setOpenDeleteModal] = useState(false);
   const [selectedMember, setSelectedMember] = useState(null);
@@ -274,7 +276,7 @@ const Members = () => {
       <div className='custom-container primary-bg'>
         <Form>
           <ToolbarBox>
-            <IconButton rounded={true} onClick={() => setOpenRoleModal(true)}>
+            <IconButton rounded={true} onClick={() => setOpenMemberModal(true)}>
               <FontAwesomeIcon icon={faPlus} />
               <div>Add</div>
             </IconButton>
@@ -299,12 +301,19 @@ const Members = () => {
         </Form>
       </div>
 
+      <MemberModal
+        openModal={openMemberModal}
+        roles={roles}
+        onClose={() => setOpenMemberModal(false)}
+        onSubmit={() => setOpenMemberModal(false)}
+      />
+
       <RoleModal
         openModal={openRoleModal}
-        selectedMember={selectedMember}
         roles={roles}
-        onClose={() => handleUpdateMember()}
-        onSubmit={() => handleUpdateMember()}
+        selectedMember={selectedMember}
+        onClose={() => setOpenRoleModal(false)}
+        onSubmit={() => setOpenRoleModal(false)}
       />
 
       <DeleteModal

@@ -69,6 +69,78 @@ const Tags = () => {
         colorHexCode: "#0000FF",
       },
     },
+    {
+      id: 4,
+      name: "Task",
+      color: "Yellow",
+      colorDetail: {
+        categoryId: 4,
+        categoryName: "Yellow",
+        colorId: 10,
+        colorName: "Yellow",
+        colorHexCode: "#FFFF00",
+      },
+    },
+    {
+      id: 5,
+      name: "Question",
+      color: "Purple",
+      colorDetail: {
+        categoryId: 5,
+        categoryName: "Purple",
+        colorId: 13,
+        colorName: "Purple",
+        colorHexCode: "#800080",
+      },
+    },
+    {
+      id: 6,
+      name: "Documentation",
+      color: "Orange",
+      colorDetail: {
+        categoryId: 6,
+        categoryName: "Orange",
+        colorId: 16,
+        colorName: "Orange",
+        colorHexCode: "#FFA500",
+      },
+    },
+    {
+      id: 7,
+      name: "Review",
+      color: "Pink",
+      colorDetail: {
+        categoryId: 7,
+        categoryName: "Pink",
+        colorId: 19,
+        colorName: "Pink",
+        colorHexCode: "#FFC0CB",
+      },
+    },
+    {
+      id: 8,
+      name: "Meeting",
+      color: "Brown",
+      colorDetail: {
+        categoryId: 8,
+        categoryName: "Brown",
+        colorId: 22,
+        colorName: "Brown",
+        colorHexCode: "#A52A2A",
+      },
+    },
+    {
+      id: 9,
+      name: "Testing",
+      color: "Light Blue",
+      colorDetail: {
+        categoryId: 9,
+        categoryName: "Light Blue",
+        colorId: 25,
+        colorName: "Light Blue",
+        colorHexCode: "#ADD8E6",
+      },
+    },
   ]);
   const [tableHeaders, setTableHeader] = useState([
     {

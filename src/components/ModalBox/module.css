@@ -1,5 +1,5 @@
 .modal-box {
-  @apply fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 overflow-hidden;
+  @apply fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 overflow-y-auto;
 }
 
 .modal-body {
@@ -7,6 +7,11 @@
   display: grid;
   grid-template-rows: auto 1fr auto;
   transform: translateY(-40px);
+
+  p {
+    @apply flex items-center;
+    min-height: 64px;
+  }
 }
 
 .modal-header {
@@ -46,6 +51,15 @@
 
 .modal-footer {
   @apply flex items-center justify-end gap-4 border-t border-reverseModal mt-3 pt-8 pb-4;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: end;
+  }
+}
+
+.modal-message-footer {
+  @apply flex items-center justify-end gap-4 pt-6 pb-4;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;

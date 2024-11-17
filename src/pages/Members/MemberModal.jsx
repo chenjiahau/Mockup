@@ -7,10 +7,9 @@ import FormLabel from "@/components/FormLabel";
 import DropdownBox from "@/components/DropdownBox";
 import InputBox from "@/components/InputBox";
 
-const RoleModal = ({ openModal, selectedMember, roles, onClose, onSubmit }) => {
+const MemberModal = ({ openModal, roles, onClose, onSubmit }) => {
   const [name, setName] = useState("");
   const [roleOptions, setRoleOptions] = useState([]);
-  const modalTitle = selectedMember ? "Edit Role" : "Add Role";
 
   const handleRoleChange = (option) => {
     const updatedRoleOptions = roleOptions.map((roleOption) => {
@@ -33,18 +32,9 @@ const RoleModal = ({ openModal, selectedMember, roles, onClose, onSubmit }) => {
       active: false,
     }));
 
-    if (selectedMember) {
-      const selectedOption = updatedRoleOptions.find(
-        (option) => option.value === selectedMember.roleId
-      );
-
-      selectedOption.active = true;
-    } else {
-      updatedRoleOptions[0].active = true;
-    }
-
+    updatedRoleOptions[0].active = true;
     setRoleOptions(updatedRoleOptions);
-  }, [selectedMember, roles]);
+  }, [roles]);
 
   if (!openModal || roleOptions.length === 0) {
     return null;
@@ -52,10 +42,21 @@ const RoleModal = ({ openModal, selectedMember, roles, onClose, onSubmit }) => {
 
   return (
     <ModalBox
-      title={modalTitle}
+      title='Add Member'
       onClose={() => onClose()}
       onSubmit={() => onSubmit()}
     >
+      <FormGroup>
+        <FormLabel forName='name'>Name</FormLabel>
+        <InputBox
+          type='text'
+          id='name'
+          name='name'
+          placeholder='Name'
+          value={name}
+          onChange={(value) => setName(value)}
+        />
+      </FormGroup>
       <FormGroup>
         <FormLabel forName='name'>Roles</FormLabel>
         <DropdownBox
@@ -68,7 +69,7 @@ const RoleModal = ({ openModal, selectedMember, roles, onClose, onSubmit }) => {
   );
 };
 
-RoleModal.propTypes = {
+MemberModal.propTypes = {
   openModal: PropTypes.bool,
   selectedMember: PropTypes.object,
   roles: PropTypes.array,
@@ -76,4 +77,4 @@ RoleModal.propTypes = {
   onSubmit: PropTypes.func,
 };
 
-export default RoleModal;
+export default MemberModal;
