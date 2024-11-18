@@ -21,6 +21,7 @@ import ToolbarBox from "@/components/ToolbarBox";
 import TableBox from "@/components/TableBox";
 import PaginationBox, { numberOfRow } from "@/components/PaginationBox";
 import Spacer from "@/components/Spacer";
+import Tooltip from "@/components/Tooltip";
 
 import CategoryModal from "./CategoryModal";
 import DeleteModal from "./DeleteModal";
@@ -39,13 +40,51 @@ const Categories = () => {
     {
       id: 1,
       name: "Company",
-      subcategories: 5,
+      subcategories: (
+        <Tooltip
+          content={
+            <ul>
+              <li>Subcategory 1</li>
+              <li>Subcategory 2</li>
+              <li>Subcategory 3</li>
+              <li>Subcategory 4</li>
+              <li>Subcategory 5</li>
+              <li>Subcategory 6</li>
+              <li>Subcategory 7</li>
+              <li>Subcategory 8</li>
+              <li>Subcategory 9</li>
+              <li>Subcategory 10</li>
+            </ul>
+          }
+        >
+          100
+        </Tooltip>
+      ),
       status: true,
     },
     {
       id: 2,
       name: "Person",
-      subcategories: 10,
+      subcategories: (
+        <Tooltip
+          content={
+            <ul>
+              <li>Subcategory 1</li>
+              <li>Subcategory 2</li>
+              <li>Subcategory 3</li>
+              <li>Subcategory 4</li>
+              <li>Subcategory 5</li>
+              <li>Subcategory 6</li>
+              <li>Subcategory 7</li>
+              <li>Subcategory 8</li>
+              <li>Subcategory 9</li>
+              <li>Subcategory 10</li>
+            </ul>
+          }
+        >
+          10
+        </Tooltip>
+      ),
       status: true,
     },
   ]);

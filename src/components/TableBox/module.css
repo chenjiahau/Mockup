@@ -1,6 +1,5 @@
 .table-box {
-  @apply w-full bg-white shadow-md rounded-md border border-primary p-1;
-  overflow-x: auto;
+  @apply relative w-full bg-white shadow-md rounded-md border border-primary p-1;
 
   @media screen and (min-width: 1024px) {
     display: block;

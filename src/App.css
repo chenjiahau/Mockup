@@ -8,6 +8,7 @@ html {
   margin: 0;
   font-family: "Roboto", sans-serif;
   font-size: 87.5%;
+  background-color: #5bbcff;
   overflow-x: hidden;
 
   @media (max-width: 768px) {
@@ -17,6 +18,18 @@ html {
 
 h1 {
   @apply text-4xl p-0;
+}
+
+ul {
+  @apply list-none;
+}
+
+li {
+  @apply mb-2 p-0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .layout {
