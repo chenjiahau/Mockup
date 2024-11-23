@@ -13,6 +13,7 @@ const ModalBox = ({
   enableMessageModal,
   enableScroll,
   customWidthClass,
+  confirmMode,
   deleteMode,
   title,
   onClose,
@@ -21,6 +22,7 @@ const ModalBox = ({
 }) => {
   enableMessageModal = enableMessageModal || false;
   customWidthClass = customWidthClass || "";
+  confirmMode = confirmMode || false;
   deleteMode = deleteMode || false;
   title = title || "Modal Title";
   onClose = isFunction(onClose) ? onClose : () => {};
@@ -58,20 +60,32 @@ const ModalBox = ({
             enableMessageModal ? "modal-message-footer " : "modal-footer "
           }`}
         >
-          <ButtonBox
-            onClick={onSubmit}
-            isSave={true}
-            extraClasses={["primary-shadow"]}
-          >
-            {deleteMode ? "Delete" : "Save"}
-          </ButtonBox>
-          <ButtonBox
-            onClick={onClose}
-            isClose={true}
-            extraClasses={["cancel-shadow"]}
-          >
-            Close
-          </ButtonBox>
+          {confirmMode ? (
+            <ButtonBox
+              onClick={onSubmit}
+              isSave={true}
+              extraClasses={["primary-shadow"]}
+            >
+              Done
+            </ButtonBox>
+          ) : (
+            <>
+              <ButtonBox
+                onClick={onSubmit}
+                isSave={true}
+                extraClasses={["primary-shadow"]}
+              >
+                {deleteMode ? "Delete" : "Save"}
+              </ButtonBox>
+              <ButtonBox
+                onClick={onClose}
+                isClose={true}
+                extraClasses={["cancel-shadow"]}
+              >
+                Close
+              </ButtonBox>
+            </>
+          )}
         </div>
       </div>
     </div>
@@ -82,6 +96,7 @@ ModalBox.propTypes = {
   enableMessageModal: PropTypes.bool,
   enableScroll: PropTypes.bool,
   customWidthClass: PropTypes.string,
+  confirmMode: PropTypes.bool,
   deleteMode: PropTypes.bool,
   title: PropTypes.string,
   onClose: PropTypes.func,
