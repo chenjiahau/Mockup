@@ -35,6 +35,9 @@ const Register = () => {
 
         <div className='login-block login-form light-primary-shadow'>
           <FormGroup>
+            <MainTitle extraClasses={["text-general"]}>Sign Up</MainTitle>
+          </FormGroup>
+          <FormGroup>
             <FormLabel forName='email'>E-mail</FormLabel>
             <InputBox
               type='text'

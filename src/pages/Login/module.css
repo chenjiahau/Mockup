@@ -55,7 +55,7 @@
   transform: translateY(-0.5rem);
 
   .link-button {
-    @apply h-[18px] p-0 text-black;
+    @apply p-0 text-black;
     font-size: inherit;
   }
 }

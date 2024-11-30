@@ -3,11 +3,13 @@ import "./module.css";
 import { useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import { isFunction } from "lodash";
+
 import { generateExtraClass } from "../util";
 
 const InputBox = ({
   type,
   extraClasses,
+  disabled,
   onChange,
   onClose,
   children,
@@ -15,6 +17,7 @@ const InputBox = ({
 }) => {
   type = type || "text";
   let extraClassName = generateExtraClass(extraClasses);
+  let disabledClass = disabled ? "disabled" : "";
   const inputRef = useRef(null);
 
   const handleClick = (e) => {
@@ -31,14 +34,15 @@ const InputBox = ({
 
   return (
     <div
-      className={`primary-shadow ${
+      className={` primary-shadow ${
         children ? "input-box-with-icon" : "input-box"
-      }`}
+      } ${disabledClass}
+      `}
     >
       <input
         ref={inputRef}
         type={type}
-        className={` ${extraClassName}`}
+        className={`${extraClassName} ${disabledClass}`}
         {...props}
         onChange={(e) => onChange(e.target.value)}
         onKeyDown={handleClick}
@@ -51,6 +55,7 @@ const InputBox = ({
 InputBox.propTypes = {
   type: PropTypes.string,
   extraClasses: PropTypes.array,
+  disabled: PropTypes.bool,
   onChange: PropTypes.func,
   onClose: PropTypes.func,
   children: PropTypes.node,

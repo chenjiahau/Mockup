@@ -26,6 +26,11 @@ const ForgotPassword = () => {
 
         <div className='login-block login-form light-primary-shadow'>
           <FormGroup>
+            <MainTitle extraClasses={["text-general"]}>
+              Forgot Password
+            </MainTitle>
+          </FormGroup>
+          <FormGroup>
             <FormLabel forName='email'>E-mail</FormLabel>
             <InputBox
               type='text'

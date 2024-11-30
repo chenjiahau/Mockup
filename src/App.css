@@ -83,3 +83,11 @@ li {
 .spacer {
   @apply h-8;
 }
+
+.disabled {
+  @apply !text-primary cursor-not-allowed;
+
+  :hover {
+    @apply !text-primary !border-primary;
+  }
+}

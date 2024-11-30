@@ -31,6 +31,9 @@ const Login = () => {
 
         <div className='login-block login-form light-primary-shadow'>
           <FormGroup>
+            <MainTitle extraClasses={["text-general"]}>Sign In</MainTitle>
+          </FormGroup>
+          <FormGroup>
             <FormLabel forName='email'>E-mail</FormLabel>
             <InputBox
               type='text'
