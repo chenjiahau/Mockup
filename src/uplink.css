@@ -1,0 +1,15 @@
+.uplink-node { width: max-content; padding: 7px 9px; border-radius: 5px; background: #fff; font-size: 12px; font-weight: 700; box-shadow: 0 1px 3px #22365b33; white-space: nowrap; }
+.uplink-node b { font-size: 18px; }
+.uplink-node.to-fabric { border: 1px solid #5cbd68; color: #1b4a27; }
+.uplink-node.to-fabric b { color: #16a53a; }
+.uplink-node.to-enterprise { border: 1px solid #74a0dc; color: #29446c; }
+.uplink-node.to-enterprise b { color: #3679cc; }
+.uplink-node.to-enterprise { display: flex; align-items: center; gap: 4px; position: relative; padding: 6px 10px; }
+.uplink-node .tag-bracket { color: #17243a; font-size: 27px; font-style: normal; font-weight: 400; line-height: 20px; }
+.uplink-node .tag-bracket.close { margin-left: -2px; }
+.uplink-node .tag-connector { position: absolute; left: 100%; top: 50%; width: 54px; height: 0; border-top: 6px solid #4e8fd7; transform: translateY(-50%); }
+
+.flow-stage .react-flow__controls { left: auto; right: 20px; bottom: 20px; }
+.collapse-toggle { position: absolute; left: 50%; top: 84px; z-index: 5; width: 28px; height: 28px; padding: 0; border: 2px solid #243d83; border-radius: 50%; background: #fff; color: #243d83; font-size: 20px; font-weight: 700; line-height: 20px; transform: translateX(-50%); }
+.react-flow__node[data-id="enterprise"] { height: 980px !important; }
+.rf-device button.node-icon { padding: 0; cursor: pointer; }
